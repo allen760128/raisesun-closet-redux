@@ -1,0 +1,174 @@
+.forgetWrap{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(59, 59, 59,0.6);
+    transition: 0.3s all ease-in-out;
+}
+.forgetWrap .inner{
+    position: absolute;
+    width: 40%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: #fefbf4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forgetWrap .inner .innerWrap{
+    width: 80%;
+    height: 70vh;
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 20px;
+    position: relative;
+    color:rgb(126, 126, 126);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forgetWrap .inner .innerWrap .innerTitle{
+    width: 110px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: #fefbf4; 
+    text-align: center;
+}
+.forgetWrap .inner .innerWrap form{
+    width: 90%;
+    height: 80%;
+}
+.forgetWrap .inner .innerWrap form .idWrap,
+.forgetWrap .inner .innerWrap form .emailWrap{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.forgetWrap .inner .innerWrap form .idWrap label,
+.forgetWrap .inner .innerWrap form .emailWrap label{
+    margin-bottom: 10px;
+}
+.forgetWrap .inner .innerWrap form .idWrap input,
+.forgetWrap .inner .innerWrap form .emailWrap input{
+    width: 80%;
+    height: 25px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+.forgetWrap .inner .innerWrap form .iderror,
+.forgetWrap .inner .innerWrap form .emailerror{
+    display: block;
+    margin:5px 0 40px 0px;
+    color:rgb(255, 22, 22);
+    font-size: 14px;
+    height: 14px;
+}
+.forgetWrap .inner .innerWrap form h3{
+    line-height: 26px;
+    font-size: 16px;
+}
+.forgetWrap .inner .innerWrap form .buttonWrap{
+    width: 100%;
+    height: 80px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forgetWrap .inner .innerWrap form .buttonWrap input{
+    width:100px;
+	height:30px;
+	border-radius:6px;
+    background: linear-gradient(to bottom, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%);
+    font-size:16px;
+	letter-spacing:3px;
+	color:#FFF;
+    border: none;
+    font-weight: 900;
+    margin: 0 50px;
+    cursor: pointer;
+}
+.forgetWrap .inner .innerWrap form .buttonWrap input:active{
+    background: linear-gradient(to bottom, #6db3f2 0%,#54a3ee 30%,#3690f0 31%,#1e69de 80%);
+}
+
+@media (min-width:970px) and (max-width:1169px){
+.forgetWrap .inner{
+    width: 50%;
+}
+
+}
+
+@media (min-width:769px) and (max-width:969px){
+.forgetWrap .inner{
+    width: 450px;
+}
+.forgetWrap .inner .innerWrap{
+    width: 90%;
+}
+.forgetWrap .inner .innerWrap form .idWrap input,
+.forgetWrap .inner .innerWrap form .emailWrap input{
+    width: 100%;
+}
+.forgetWrap .inner .innerWrap form .buttonWrap input{
+    width:140px;
+    margin: 0 20px;
+}
+    
+}
+
+@media  (max-width:768px){
+.forgetWrap .inner{
+    width: 250px;
+}
+.forgetWrap .inner .innerWrap{
+    width: 90%;
+    height: auto;
+    padding: 30px 0;
+}
+.forgetWrap .inner .innerWrap form{
+    width: 85%;
+    height: auto;
+}
+.forgetWrap .inner .innerWrap form h3{
+    line-height: 18px;
+    font-size: 12px;
+}
+.forgetWrap .inner .innerWrap form .idWrap,
+.forgetWrap .inner .innerWrap form .emailWrap{
+    width: 100%;
+}
+.forgetWrap .inner .innerWrap form .idWrap label,
+.forgetWrap .inner .innerWrap form .emailWrap label{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.forgetWrap .inner .innerWrap form .idWrap input,
+.forgetWrap .inner .innerWrap form .emailWrap input{
+    width: 100%;
+}
+.forgetWrap .inner .innerWrap form .iderror,
+.forgetWrap .inner .innerWrap form .emailerror{
+    margin:5px 0 20px 0px;
+    font-size: 10px;
+    height: 10px;
+}
+.forgetWrap .inner .innerWrap form .buttonWrap{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.forgetWrap .inner .innerWrap form .buttonWrap input{
+    width:80%;
+    height: 25px;
+    margin: 5px 0px;
+}
+}

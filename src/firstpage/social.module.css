@@ -1,0 +1,150 @@
+
+#social{
+    width:1400px;
+    padding: 155px 0 50px 0;
+    margin: 0 auto;
+}
+#social .link{
+	width:100%;
+	height:200px;
+    }       
+#social .link ul{
+	width:1000px;
+	height:100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+	}
+#social .link ul li{
+	width:100px;
+	height:100px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 50px;
+}
+#social .link ul li i{
+	display:block;
+	width:100px;
+	height:100px;
+	text-indent:-9999px;
+	background-repeat:no-repeat;
+    background-size: 110px 110px;
+    background-position: center;
+    border-radius: 50%;	
+    position: absolute;
+    cursor: pointer;
+}
+#social .link ul li  i:nth-child(2){
+    transition: 0.6s all ease-in-out;
+}
+#social .link ul li:hover  i:nth-child(2){
+    opacity:0;
+    transition: 0.4s all ease-in-out;
+}
+#social .link ul li a{
+    display: block;
+    width:100px;
+	height:100px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    transition: 0.4s all ease-in-out;
+    z-index: 11;
+}
+#social .link ul li i:first-child{
+    top: -100px;
+    opacity: 0;
+    z-index: 10;
+    transition: 0.4s all ease-in-out;
+}
+#social .link ul li:first-child>i:first-child{
+    background-color: #3b589e;
+}
+#social .link ul li:nth-child(2)>i:first-child{
+    background-color: #2b9ee6;
+}
+#social .link ul li:nth-child(3)>i:first-child{
+    background-color: #2a5b83;
+}
+#social .link ul li:last-child>i:first-child{
+    background-color: #cd2129;
+}
+
+@media (min-width:970px) and (max-width:1169px){
+#social{
+    width:100%;
+    padding: 100px 0 50px 0;
+}
+#social .link ul{
+    width:100%;
+}
+#social .link ul li{
+    width:100px;
+    height:100px;
+    margin: 0 5%;
+}
+}
+
+@media (min-width:769px) and (max-width:969px){
+#social{
+    width:100%;
+    padding: 80px 0 20px 0;
+}
+#social .link ul{
+    width:100%;
+}
+#social .link ul li{
+    width:80px;
+    height:80px;
+    margin: 0 5%;
+}
+#social .link ul li i{
+	width:80px;
+	height:80px;
+    background-size: 90px 90px;
+}
+#social .link ul li a{
+    width:80px;
+	height:80px;
+    font-size: 13px;
+    line-height:80px;
+}
+}
+
+@media  (max-width:768px){
+#social{
+    width:100%;
+    padding: 0px 0 50px 0;
+}
+#social .link{
+	width:100%;
+	height:auto;
+    }   
+#social .link ul{
+    width:80%;
+	height:auto;
+}
+#social .link ul li{
+    width:80px;
+    height:80px;
+    margin: 20px 8%;
+}
+#social .link ul li i{
+    width:80px;
+    height:80px;
+    background-size: 90px 90px;
+}
+#social .link ul li a{
+    width:80px;
+    height:80px;
+    font-size: 13px;
+    line-height:80px;
+}
+
+}

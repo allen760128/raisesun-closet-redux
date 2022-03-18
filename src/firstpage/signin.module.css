@@ -1,0 +1,399 @@
+.signIn{
+    position: absolute;
+    width: 400px;
+    height: 295px;
+    background-color: #fefbf4;
+    top: 0;
+    right: 0px;
+    transition: 0.3s all ease-in-out;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    color:rgb(126, 126, 126);
+}
+.signIn .inner{
+    width: 360px;
+    height: 255px;
+    margin: 0 auto;
+}
+.signIn .inner .top{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.signIn .inner .top .topLeft{
+    width: 50%;
+    font-size: 20px;
+    font-weight: 700;
+}
+.signIn .inner .top .topRight{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+.signIn .inner .top .topRight a{
+    color: #0CC;
+    transition: 0.3s all ease-in-out;
+}
+.signIn .inner .top .topRight a:hover{
+    color: rgb(33, 233, 233);
+}
+.signIn .inner .middle{
+    height: 205px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.signIn .inner .middle .middleInner{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 20px;
+}
+.signIn .inner .middle .middleInner .loginTitle{
+    position: absolute;
+    width: 120px;
+    height: 20px;
+    top: -10px;
+    left: 20px;
+    background-color: #fefbf4; 
+    padding-left: 8px;
+}
+.signIn .inner .middle .middleInner form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 85%;
+    margin-left: 25px;
+    padding-top: 20px;
+}
+.signIn .inner .middle .middleInner form label{
+    margin-right: 10px;
+}
+.signIn .inner .middle .middleInner form>div:first-child>input,
+.signIn .inner .middle .middleInner form>div:nth-child(3)>input{
+    height: 25px;
+    width: 70%;
+    padding-left: 5px;
+}
+.signIn .inner .middle .middleInner form .idWrap,
+.signIn .inner .middle .middleInner form .passWrap
+{
+    height: 25px;
+}
+.signIn .inner .middle .middleInner .iderror,
+.signIn .inner .middle .middleInner .passerror{
+    margin:5px 0 10px 80px;
+    color:rgb(255, 22, 22);
+    font-size: 14px;
+    height: 14px;
+    display: block;
+}
+.signIn .inner .middle .middleInner form .remem{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+.signIn .inner .middle .middleInner form>div:nth-child(5)>input{
+    height: 25px;
+    margin-right: 5px;
+    width: 20px;
+}
+.signIn .inner .middle .middleInner form .loginWrap{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+.signIn .inner .middle .middleInner form .loginWrap .loginLeft{
+    width: 50%;
+}
+.signIn .inner .middle .middleInner form .loginWrap .loginLeft a{
+    color: #0CC;
+    transition: 0.3s all ease-in-out;
+}
+.signIn .inner .middle .middleInner form .loginWrap .loginLeft a:hover{
+    color: rgb(33, 233, 233);
+}
+.signIn .inner .middle .middleInner form .loginWrap .loginRight{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+.signIn .inner .middle .middleInner form .loginWrap .loginRight input{
+    background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    width:100px;
+	height:30px;
+	border-radius:6px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.signIn .inner .middle .middleInner form .loginWrap .loginRight input:active{
+    background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 20%,#05abe0 60%);  
+}
+
+@media (min-width:970px) and (max-width:1169px){
+.signIn{
+    width: 350px;
+}
+.signIn .inner{
+    width: 95%;
+}
+.signIn .inner .middle .middleInner form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 85%;
+    margin-left: 25px;
+    padding-top: 10px;
+}
+.signIn .inner .middle .middleInner form label{
+    margin-right: 10px;
+    line-height: 25px;
+    font-size: 14px;
+}
+.signIn .inner .middle .middleInner form>div:first-child>input,
+.signIn .inner .middle .middleInner form>div:nth-child(3)>input{
+    height: 25px;
+    width: 95%;
+    padding-left: 5px;
+}
+.signIn .inner .middle .middleInner form .idWrap,
+.signIn .inner .middle .middleInner form .passWrap
+{
+    height: auto;
+}
+.signIn .inner .middle .middleInner .iderror,
+.signIn .inner .middle .middleInner .passerror{
+    margin:3px 0 0px 0px;
+    font-size: 14px;
+    height: 16px;
+    font-size: 14px;
+}
+.signIn .inner .middle .middleInner form .remem{
+    height: 15px;
+}
+.signIn .inner .middle .middleInner form>div:nth-child(5)>input{
+    height: 15px;
+    width: 15px;
+}
+.signIn .inner .middle .middleInner form .loginWrap{
+    height: 30px;
+}
+.signIn .inner .middle .middleInner form .loginWrap .loginRight input{
+    width:80px;
+    height:25px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+}
+
+/* @media (min-width:769px) and (max-width:969px){
+.signIn{
+    width: 450px;
+    height: 100%;
+    align-items:baseline;
+}
+.signIn .inner{
+    width: 95%;
+}
+.signIn .inner .middle .middleInner{
+    height: 200px;
+    width: 100%;
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 20px;
+}
+.signIn .inner .middle .middleInner form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 85%;
+    margin-left: 25px;
+    padding-top: 10px;
+}
+.signIn .inner .middle .middleInner form label{
+    margin-right: 10px;
+    line-height: 25px;
+    font-size: 14px;
+}
+.signIn .inner .middle .middleInner form>div:first-child>input,
+.signIn .inner .middle .middleInner form>div:nth-child(3)>input{
+    height: 25px;
+    width: 95%;
+    padding-left: 5px;
+}
+.signIn .inner .middle .middleInner form .idWrap,
+.signIn .inner .middle .middleInner form .passWrap
+{
+    height: auto;
+}
+.signIn .inner .middle .middleInner .iderror,
+.signIn .inner .middle .middleInner .passerror{
+    margin:3px 0 0px 0px;
+    font-size: 14px;
+    height: 16px;
+    font-size: 14px;
+}
+.signIn .inner .middle .middleInner form .remem{
+    height: 15px;
+}
+.signIn .inner .middle .middleInner form>div:nth-child(5)>input{
+    height: 15px;
+    width: 15px;
+}
+.signIn .inner .middle .middleInner form .loginWrap{
+    height: 30px;
+}
+.signIn .inner .middle .middleInner form .loginWrap .loginRight input{
+    width:80px;
+    height:25px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+} */
+
+@media (min-width:769px) and (max-width:969px){
+.signIn{
+    width: 450px;
+    height: 100%;
+    align-items:baseline;
+    position: fixed;
+}
+.signIn .inner{
+    width: 380px;
+    margin-top: 50px;
+    height: 500px;
+}
+.signIn .inner .middle{
+    height: 300px;
+}
+.signIn .inner .middle .middleInner{
+    height: 280px;
+}
+.signIn .inner .middle .middleInner form label{
+    margin-right: 10px;
+    line-height: 25px;
+    font-size: 14px;
+}
+.signIn .inner .middle .middleInner form>div:first-child>input,
+.signIn .inner .middle .middleInner form>div:nth-child(3)>input{
+    height: 25px;
+    width: 95%;
+    padding-left: 5px;
+}
+.signIn .inner .middle .middleInner form .idWrap,
+.signIn .inner .middle .middleInner form .passWrap
+{
+    height: auto;
+}
+.signIn .inner .middle .middleInner .iderror,
+.signIn .inner .middle .middleInner .passerror{
+    margin:15px 0 0px 0px;
+    font-size: 14px;
+    height: 20px;
+}
+.signIn .inner .middle .middleInner form .remem{
+    height: 30px;
+    margin-top: 10px;
+}
+.signIn .inner .middle .middleInner form>div:nth-child(5)>input{
+    height: 15px;
+    width: 15px;
+}
+.signIn .inner .middle .middleInner form .loginWrap{
+    height: 30px;
+}
+.signIn .inner .middle .middleInner form .loginWrap .loginRight input{
+    width:80px;
+    height:25px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+}
+
+@media  (max-width:768px){
+.signIn{
+    width: 250px;
+    height: 100vh;
+    align-items:baseline;
+    position: fixed;
+}
+.signIn .inner{
+    width: 90%;
+    margin-top: 50px;
+    height: 500px;
+}
+.signIn .inner .middle{
+    height: 330px;
+}
+.signIn .inner .middle .middleInner{
+    height:330px;
+    display: flex;
+    justify-content: center;
+}
+.signIn .inner .middle .middleInner form{
+    margin-left: 0;
+    width: 85%;
+}
+.signIn .inner .middle .middleInner form label{
+    margin-right: 10px;
+    line-height: 25px;
+    font-size: 14px;
+}
+.signIn .inner .middle .middleInner form>div:first-child>input,
+.signIn .inner .middle .middleInner form>div:nth-child(3)>input{
+    height: 25px;
+    width: 100%;
+    padding-left: 5px;
+}
+.signIn .inner .middle .middleInner form .idWrap,
+.signIn .inner .middle .middleInner form .passWrap
+{
+    height: auto;
+}
+.signIn .inner .middle .middleInner .iderror,
+.signIn .inner .middle .middleInner .passerror{
+    margin:5px 0 10px 0px;
+    font-size: 10px;
+    height: 20px;
+}
+.signIn .inner .middle .middleInner form .remem{
+    height: 30px;
+    margin-top: 10px;
+}
+.signIn .inner .middle .middleInner form>div:nth-child(5)>input{
+    height: 15px;
+    width: 15px;
+}
+.signIn .inner .middle .middleInner form .loginWrap{
+    height: 100px;
+    display: flex;
+    align-items:baseline;
+    flex-direction: column;
+}
+/* .signIn .inner .middle .middleInner form .loginWrap .loginRight input{
+    width:120px;
+    height:25px;
+    font-size: 14px;
+    margin-right: 0px;
+} */
+.signIn .inner .middle .middleInner form .loginWrap .loginLeft{
+    width: 50%;
+    margin: 10px 0 20px 0;
+}
+.signIn .inner .middle .middleInner form .loginWrap .loginRight{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.signIn .inner .middle .middleInner form .loginWrap .loginRight input{
+    background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    width:120px;
+	height:30px;
+}
+}

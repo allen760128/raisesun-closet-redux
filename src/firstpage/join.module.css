@@ -1,0 +1,170 @@
+.joinWrap{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(59, 59, 59,0.6);
+    transition: 0.3s all ease-in-out;
+}
+.joinWrap .inner{
+    position: absolute;
+    width: 40%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: #fefbf4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.joinWrap .inner .innerWrap{
+    width: 80%;
+    height: 80vh;
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 20px;
+    position: relative;
+    color:rgb(126, 126, 126);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.joinWrap .inner .innerWrap .innerTitle{
+    width: 110px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: #fefbf4; 
+    text-align: center;
+}
+.joinWrap .inner .innerWrap form{
+    width: 90%;
+    height: 90%;
+}
+.joinWrap .inner .innerWrap form .idWrap,
+.nameWrap,.passWrap,.conWrap,.bdWrap,.phoneWrap,.emailWrap{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.joinWrap .inner .innerWrap form .idWrap label,
+.nameWrap label,.passWrap label,.conWrap label,
+.bdWrap label,.phoneWrap label,.emailWrap label{
+    margin-bottom: 10px;
+}
+.joinWrap .inner .innerWrap form .idWrap input,
+.nameWrap input,.passWrap input,.conWrap input,
+.bdWrap input,.phoneWrap input,.emailWrap input{
+    width: 80%;
+    height: 25px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+.joinWrap .inner .innerWrap form .iderror,.nameerror,
+.passerror,.conerror,.bderror,.phoneerror,.emailerror{
+    display: block;
+    margin:3px 0 10px 0px;
+    color:rgb(255, 22, 22);
+    font-size: 14px;
+    height: 14px;
+}
+.joinWrap .inner .innerWrap form .buttonWrap{
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.joinWrap .inner .innerWrap form .buttonWrap input{
+    width:100px;
+	height:30px;
+	border-radius:6px;
+    background: linear-gradient(to bottom, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%);
+    font-size:16px;
+	letter-spacing:3px;
+	color:#FFF;
+    border: none;
+    font-weight: 900;
+    margin: 0 50px;
+    cursor: pointer;
+}
+.joinWrap .inner .innerWrap form .buttonWrap input:active{
+    background: linear-gradient(to bottom, #6db3f2 0%,#54a3ee 30%,#3690f0 31%,#1e69de 80%);
+   
+}
+
+@media (min-width:970px) and (max-width:1169px){
+.joinWrap .inner{
+    width: 50%;
+}    
+}
+
+@media (min-width:769px) and (max-width:969px){
+.joinWrap .inner{
+    width: 450px;
+}
+.joinWrap .inner .innerWrap{
+    width: 90%;
+}
+.joinWrap .inner .innerWrap form .idWrap input,
+.nameWrap input,.passWrap input,.conWrap input,
+.bdWrap input,.phoneWrap input,.emailWrap input{
+    width: 100%;
+}
+.joinWrap .inner .innerWrap form .buttonWrap input{
+    width:140px;
+    margin: 0 20px;
+}
+}
+
+@media  (max-width:768px){
+.joinWrap .inner{
+    width: 250px;
+}
+.joinWrap .inner .innerWrap{
+    width: 90%;
+    height: auto;
+    padding: 15px 0;
+}
+.joinWrap .inner .innerWrap form{
+    width: 85%;
+    height: auto;
+}
+.joinWrap .inner .innerWrap form .idWrap,
+.nameWrap,.passWrap,.conWrap,.bdWrap,.phoneWrap,.emailWrap{
+    width: 100%;
+}
+.joinWrap .inner .innerWrap form .idWrap label,
+.nameWrap label,.passWrap label,.conWrap label,
+.bdWrap label,.phoneWrap label,.emailWrap label{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.joinWrap .inner .innerWrap form .idWrap input,
+.nameWrap input,.passWrap input,.conWrap input,
+.bdWrap input,.phoneWrap input,.emailWrap input{
+    width: 100%;
+    margin-bottom: 3px;
+}
+.joinWrap .inner .innerWrap form .iderror,.nameerror,
+.passerror,.conerror,.bderror,.phoneerror,.emailerror{
+    margin:0px 0 10px 0px;
+    font-size: 10px;
+    height: 10px;
+}
+.joinWrap .inner .innerWrap form .buttonWrap{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    flex-direction: column;
+}
+.joinWrap .inner .innerWrap form .buttonWrap input{
+    width:80%;
+	height:25px;
+    margin: 5px 0px;
+} 
+}

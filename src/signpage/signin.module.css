@@ -1,0 +1,103 @@
+
+.signWrap{
+    width:100%;
+    background-color:#fefbf4;
+    
+}
+.signWrap .sign{
+    width: 600px;
+    /* height: 600px; */
+    margin: 0 auto;
+    margin-top: 80px;
+    padding-bottom: 50px;
+    margin-bottom: 150px;
+    border: 1px solid rgb(214, 214, 214);
+}
+.signWrap .sign ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.signWrap .sign ul li{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+}
+.signWrap .sign .signin{
+    padding: 60px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.signWrap .sign .signin .signinWrap{
+    width: 450px;
+    margin: 0 auto;
+}
+.buttonWrap{
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+.signWrap .sign .login{
+    padding: 60px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.signWrap .sign .login .loginWrap{
+    width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+.signWrap .sign .login .loginWrap h3{
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+
+
+
+@media (max-width:768px){
+    
+.signWrap{
+    padding-top: 80px;
+    
+}
+.signWrap .sign{
+    width:92%;
+    /* height: 600px; */
+    margin-top: 0px;
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+}
+.signWrap .sign ul li{
+    height: 40px;
+}
+.signWrap .sign .signin{
+    padding: 40px 0 0 0;
+}
+.signWrap .sign .signin .signinWrap{
+    width: 90%;
+}
+.buttonWrap{
+    margin-top: 10px;
+}
+.signWrap .sign .login{
+    padding: 20px 0 0 0;
+}
+.signWrap .sign .login .loginWrap{
+    width: 90%;
+}
+.signWrap .sign .login .loginWrap h3{
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.signWrap .sign span{
+    font-size: 12px;
+}
+}

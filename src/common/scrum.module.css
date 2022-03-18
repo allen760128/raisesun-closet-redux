@@ -1,0 +1,39 @@
+.scrum{
+    width: 100%;
+    height: 50px;
+    background-color:#fdf6ea;
+    margin-bottom: 20px;
+}
+.scrum .scrumWrap{
+    width: 70%;
+    height: 50px;
+    margin: 0 auto;
+}
+.scrum .scrumWrap ul{
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+    align-items: center;
+    color: rgb(173, 173, 173);
+}
+.scrum .scrumWrap ul li{
+    margin: 0 10px;
+}
+.scrum .scrumWrap ul li a{
+    color: rgb(173, 173, 173);
+}
+
+@media (max-width:768px){
+    .scrum{
+        width: 100%;
+    height: 50px;
+    background-color:unset;
+    margin-bottom: 0px;
+    display: none;
+    }
+    .scrum .scrumWrap{
+        width: 100%;
+        height: 50px;
+        padding-left: 20px;
+    }
+}

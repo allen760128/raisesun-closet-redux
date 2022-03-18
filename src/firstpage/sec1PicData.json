@@ -1,0 +1,39 @@
+[{
+    "id":1,
+    "link1":"img/banner1.jpg",
+    "link2":"https://www.google.com.tw/?hl=zh_TW",
+    "alt":"banner1",
+    "Class":"aa"
+},{
+    "id":2,
+    "link1":"img/banner2.jpg",
+    "link2":"https://tw.yahoo.com/",
+    "alt":"banner2",
+    "Class":"bb"
+},{
+    "id":3,
+    "link1":"img/banner3.jpg",
+    "link2":"https://shopping.pchome.com.tw/",
+    "alt":"banner3",
+    "Class":"cc"
+},{
+    "id":4,
+    "link1":"img/banner4.jpg",
+    "link2":"https://shopee.tw/",
+    "alt":"banner4",
+    "Class":"dd"
+},{
+    "id":5,
+    "link1":"img/banner5.jpg",
+    "link2":"https://www.ruten.com.tw/",
+    "alt":"banner5",
+    "Class":"ee"
+}
+,{
+    "id":6,
+    "link1":"img/banner6.jpg",
+    "link2":"https://www.ruten.com.tw/",
+    "alt":"banner5",
+    "Class":"ee"
+}
+]

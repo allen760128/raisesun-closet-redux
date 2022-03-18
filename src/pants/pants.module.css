@@ -1,0 +1,605 @@
+.pantsWrap{
+    height: auto;
+    max-width: 1400px;
+    min-height:800px;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 100px;
+}
+.pantsWrap .toCart{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 700;
+}
+.pantsWrap .toCart .toCartWrap{
+    position: absolute;
+    width: 600px;
+    height: 550px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow:0px 0px 15px  rgba(0,0,0,0.5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.pantsWrap .toCart .toCartWrap .left{
+    width: 49%;
+    height: 100%;
+    margin: 0 0 0 1%;
+}
+.pantsWrap .toCart .toCartWrap .left .bigPic{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    overflow: hidden;
+}
+.pantsWrap .toCart .toCartWrap .left .bigPic img{
+    width:auto;
+    height: 90%;
+}
+.pantsWrap .toCart .toCartWrap .left .smallPic{
+    width: 100%;
+    height: auto;
+    margin: 10px 0 0 0 ;
+}
+.pantsWrap .toCart .toCartWrap .left .smallPic ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+.pantsWrap .toCart .toCartWrap .left .smallPic ul li{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 10px 0;
+    border: 1px solid rgb(202, 202, 202);
+    cursor: pointer;
+    overflow: hidden;
+}
+.pantsWrap .toCart .toCartWrap .left .smallPic ul li img{
+    width:auto;
+    height:90%;
+}
+.pantsWrap .toCart .toCartWrap .right{
+    width: 49%;
+    height: 100%;
+    margin: 0 1% 0 0;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent{
+    margin: 20px 0 0 0;
+    padding: 0 0 0 10px;
+    width: 100%;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent h3{
+    font-size: 24px;
+    font-weight: 900;
+    margin: 50px 0 0px 0;
+    line-height: 30px;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent p{
+    font-size: 16px;
+    margin: 50px 0 20px 0;
+    padding: 5px  0 5px 7px;
+    border-left: 4px solid rgb(204, 35, 35);
+    color:rgb(61, 61, 61);
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent span{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0px 0 0px 0;
+    color:rgb(204, 35, 35);
+    display: block;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent .number{
+    width: 100%;
+    height: 250px;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent .number form{
+    display: flex;
+    flex-direction: column;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent .number form .formWrap{
+    width: 90%;
+    margin-top: 40px;
+    
+}
+/* .pantsWrap .toCart .toCartWrap .right .toCartContent .number label{
+    font-size: 14px;
+    color:rgb(61, 61, 61);
+    margin: 20px 0 5px 0;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent .number select,input{
+    height: 30px;
+    width: 90%;
+} */
+.pantsWrap .toCart .toCartWrap .right .toCartContent .number .numinp{
+    padding-left: 5px;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent .number .conform{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0 0 0;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent .number .conform input{
+    width: 43%;
+    height: 40px;
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+    /* 取消預設樣式 */
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent .number .conform input:first-child{
+    background-color:#c74060;
+    margin: 0 10px 0 0;
+    border:  1px solid #c74060;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent .number .conform input:first-child:hover{
+    background-color:#ffffff;
+    border: 1px solid #c74060;
+    color:#c74060;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent .number .conform input:last-child{
+    background-color: #00E3E3;
+    border: 1px solid #00E3E3;
+}
+.pantsWrap .toCart .toCartWrap .right .toCartContent .number .conform input:last-child:hover{
+    background-color:#ffffff;
+    border: 1px solid #00E3E3;
+    color:#00E3E3;
+}
+.pantsWrap .productWrap{
+    width: 80%;
+    height: auto;
+}
+.pantsWrap .productWrap .titleWrap{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+.pantsWrap .productWrap .titleWrap h3{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0 0 0 20px;
+}
+.pantsWrap .productWrap .pantsContents{
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+}
+.pantsWrap .productWrap .pantsContents ul{
+    width: 100%;
+    /* height: 960px; */
+    position: relative;
+    overflow: hidden;
+}
+.pantsWrap .productWrap .pantsContents ul .pantsPageWrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top:0;
+}
+.pantsWrap .productWrap .pantsContents ul .circleBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+.pantsWrap .productWrap .pantsContents ul li{
+    width: 29%;
+    height: 440px;
+    margin: 0 2% 40px 2%;
+}
+.pantsWrap .productWrap .pantsContents ul li a{
+    height: 440px;
+    width: 100%;
+}
+.pantsWrap .productWrap .pantsContents ul li .pcImg{
+    width: 100%;
+    height: 340px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(243, 243, 243);
+    position: relative;
+}
+.pantsWrap .productWrap .pantsContents ul li .pcImg .pcCover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    opacity: 0;
+}
+.pantsWrap .productWrap .pantsContents ul li .pcImg .pcCover .cart{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+.pantsWrap .productWrap .pantsContents ul li .pcImg .pcCover .cart input{
+    border: unset;
+    width: 90%;
+    height: 50px;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    color: #000;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.pantsWrap .productWrap .pantsContents ul li .pcImg .pcCover .cart input:hover{
+    background-color: rgb(180, 180, 180);
+    color:#fff;
+    transition: 0.3s all ease-in-out;
+}
+.pantsWrap .productWrap .pantsContents ul li a:hover .pcCover{
+    opacity: 1;
+}
+.pantsWrap .productWrap .pantsContents ul li .pcImg img{
+    height: auto;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.pantsWrap .productWrap .pantsContents ul li .pcTitle{
+    text-align: center;
+    padding: 6px 0 0 0;
+}
+.pantsWrap .productWrap .pantsContents ul li .pcTitle h3{
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+}
+.pantsWrap .productWrap .pantsContents ul li .pcTitle span{
+    font-weight: 700;
+    color: rgb(187, 37, 37);
+    line-height: 24px;
+}
+.pantsWrap .productWrap .pantsContents ul li .cart2{
+    display: none;
+}
+.pantsWrap .productWrap .pantsPage{
+    widows: 100%;
+    height: 100px;
+    display: flex;
+    justify-content:flex-end;
+}
+.pantsWrap .productWrap .pantsPage .pageWrap{
+    width: auto;
+    height: 50px;
+    padding-right: 30px;
+}
+.pantsWrap .productWrap .pantsPage .pageWrap ul{
+    display: flex;
+    justify-content: center;
+}
+.pantsWrap .productWrap .pantsPage .pageWrap ul li{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border: 1px solid rgb(83, 83, 83);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 38px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.pantsWrap .productWrap .pantsPage .pageWrap ul li:hover{
+    color: rgb(180, 180, 180);
+    border: 1px solid rgb(180, 180, 180);
+    transition: 0.3s all ease-in-out;
+}
+.active{
+    background-color: #000;
+    color: #fff;
+    border:none;
+}
+
+
+
+@media (min-width:769px) and (max-width:969px){
+    .pantsWrap{
+        width: 100%;
+        padding-bottom: 100px;
+        padding-top: 50px;
+    }
+    .pantsWrap .productWrap{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .pantsWrap .productWrap .pantsContents ul li{
+        width: 31%;
+        margin: 0 1% 40px 1%;
+    }
+    .pantsWrap .productWrap .pantsContents ul li .pcImg .pcCover{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.5);
+        opacity: 0;
+    }
+    .pantsWrap .productWrap .pantsContents ul li .pcImg .pcCover .cart{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    .pantsWrap .productWrap .pantsContents ul li .pcImg{
+        height: 290px;
+    }
+    .pantsWrap .productWrap .pantsContents ul li .pcImg .pcCover .cart input{
+        display: none;
+    }
+    .pantsWrap .productWrap .pantsContents ul li .pcImg img{
+        width: 55%;
+    }
+    
+.pantsWrap .productWrap .pantsContents ul li .pcTitle{
+    height: 100px;
+}
+    .pantsWrap .productWrap .pantsContents ul li .pcTitle h3{
+        line-height: 20px;
+    }
+    .pantsWrap .productWrap .pantsContents ul li  .cart2{
+        display: block;
+        height: 40px;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+    .pantsWrap .productWrap .pantsContents ul li  .cart2 input{
+        width: 100%;
+        height: 40px;
+        border: unset;
+        cursor: pointer;
+        color: rgb(65, 65, 65);
+        font-weight: 700;
+    }
+}
+
+
+
+@media (max-width:768px){
+    .pantsWrap{
+        width: 100%;
+        padding-bottom: 100px;
+        padding-top: 50px;
+    }
+    .pantsWrap .toCart .toCartWrap{
+        width: 90%;
+        height: 350px;
+        flex-direction: column;
+        justify-content:flex-start;
+        box-shadow:none;
+        overflow: scroll;
+        padding: 0 10px 50px 10px;
+        border-bottom: 7px solid #fff;
+        overflow-x:hidden;
+    }
+    .pantsWrap .toCart .toCartWrap .left{
+        width: 100%;
+        height: 250px;
+        margin: 20px 0 0 0;
+        padding: 0 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pantsWrap .toCart .toCartWrap .left .bigPic{
+        width: 55%;
+        height: 230px;
+        margin: 0px 0 0 0;
+    }
+    .pantsWrap .toCart .toCartWrap .left .bigPic img{
+        width:auto;
+        height: 90%;
+    }
+    .pantsWrap .toCart .toCartWrap .left .smallPic{
+        width: 45%;
+        height: 250px;
+        margin: 0px 0 0 0 ;
+    }
+    .pantsWrap .toCart .toCartWrap .left .smallPic ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        height: 250px;
+    }
+    .pantsWrap .toCart .toCartWrap .left .smallPic ul li{
+        width: 60px;
+        height: 60px;
+        margin: 0px 0px 10px 10px;
+    }
+    .pantsWrap .toCart .toCartWrap .left .smallPic ul li img{
+        width:auto;
+        height:90%;
+    }
+    .pantsWrap .toCart .toCartWrap .right{
+        width: 100%;
+        height: auto;
+        margin: 20px 0% 0 0;
+    }
+    .pantsWrap .toCart .toCartWrap .right .toCartContent{
+        margin: 0px 0 0 0;
+        padding: 0 10px 0 10px;
+        width: 100%;
+    }
+    .pantsWrap .toCart .toCartWrap .right .toCartContent h3{
+        font-size: 16px;
+        margin: 0px 0 0px 0;
+        line-height: 16px;
+    }
+    .pantsWrap .toCart .toCartWrap .right .toCartContent p{
+        font-size: 12px;
+        margin: 10px 0 10px 0;
+    }
+    .pantsWrap .toCart .toCartWrap .right .toCartContent span{
+        font-size: 16px;
+        margin: 0px 0 0px 0;
+    }
+    .pantsWrap .toCart .toCartWrap .right .toCartContent .number{
+        height: 150px;
+    }
+    /* .pantsWrap .toCart .toCartWrap .right .toCartContent .number label{
+        font-size: 12px;
+        margin: 10px 0 5px 0;
+    }
+    .pantsWrap .toCart .toCartWrap .right .toCartContent .number select,input{
+        height: 25px;
+        width: 100%;
+    } */
+    .pantsWrap .toCart .toCartWrap .right .toCartContent .number form .formWrap{
+        width:100%;
+        margin-top: 20px;
+
+    }
+    .pantsWrap .toCart .toCartWrap .right .toCartContent .number .conform{
+        height: auto;
+        justify-content: center;
+        margin: 20px 0 30px 0;
+    }
+    .pantsWrap .toCart .toCartWrap .right .toCartContent .number .conform input:first-child{
+        margin: 0 10px 0 0;
+    }
+
+
+
+
+
+    .pantsWrap .productWrap{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .pantsWrap .productWrap .titleWrap h3{
+        font-size: 20px;
+        margin: 0 0 0 10px;
+    }
+    .pantsWrap .productWrap .pantsContents ul{
+        width: 100%;
+        /* height: 960px; */
+        position: relative;
+        overflow: hidden;
+    }
+    .pantsWrap .productWrap .pantsContents ul .pantsPageWrap{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        top:0;
+    }
+    .pantsWrap .productWrap .pantsContents ul li{
+        height: 340px;
+        width: 47%;
+        margin: 0 1% 40px 1%;
+    }
+    .pantsWrap .productWrap .pantsContents ul li a{
+        height: 300px;
+        width: 100%;
+    }
+    .pantsWrap .productWrap .pantsContents ul li .pcImg{
+        width: 100%;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .pantsWrap .productWrap .pantsContents ul li .pcImg .pcCover .cart input{
+        display: none;
+    }
+    .pantsWrap .productWrap .pantsContents ul li a:hover .pcCover{
+        opacity: 0;
+    }
+    .pantsWrap .productWrap .pantsContents ul li .pcImg img{
+        height: auto;
+        width: 60%;
+    }
+    .pantsWrap .productWrap .pantsContents ul li .pcTitle{
+        text-align: center;
+        padding: 6px 0 0 0;
+        height: 70px;
+    }
+    .pantsWrap .productWrap .pantsContents ul li .pcTitle h3{
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .pantsWrap .productWrap .pantsContents ul li  .cart2{
+        display: block;
+        height: 30px;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+    .pantsWrap .productWrap .pantsContents ul li  .cart2 input{
+        /* 取消預設樣式 */
+        appearance:none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        background-color: rgb(239, 239, 239);
+        width: 100%;
+        height: 30px;
+        border: unset;
+        cursor: pointer;
+        color: rgb(65, 65, 65);
+        font-weight: 700;
+    }
+    .pantsWrap .productWrap .pantsPage{
+        widows: 100%;
+        height: 100px;
+        display: flex;
+        justify-content:flex-end;
+    }
+    .pantsWrap .productWrap .pantsPage .pageWrap{
+        width: auto;
+        height: 50px;
+        padding-right: 5px;
+    }
+    .pantsWrap .productWrap .pantsPage .pageWrap ul{
+        display: flex;
+        justify-content: center;
+    }
+    .pantsWrap .productWrap .pantsPage .pageWrap ul li{
+        width: 30px;
+        height: 30px;
+        margin: 0 7px;
+        border: 1px solid rgb(83, 83, 83);
+        border-radius: 5px;
+        text-align: center;
+        line-height: 28px;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+    }
+    .pantsWrap .productWrap .pantsPage .pageWrap ul li:hover{
+        color: rgb(180, 180, 180);
+        border: 1px solid rgb(180, 180, 180);
+        transition: 0.3s all ease-in-out;
+    }
+    .active{
+        background-color: #000;
+        color: #fff;
+        border:none;
+    }
+}

@@ -1,0 +1,31 @@
+[{
+  "id":1,
+  "classname1":"style.f_b",
+  "classname2":"{style.f_u}",
+  "backImg":"social_1.jpg",
+  "title":"Facebook",
+  "link":"https://www.facebook.com/",
+  "color":"#3b589e"
+},{
+    "id":2,
+    "classname1":"{style.t_b}",
+    "classname2":"{style.t_u}",
+    "backImg":"social_2.png",
+    "title":"Twitter",
+    "link":"https://twitter.com/?lang=zh-Hant"
+  },{
+    "id":3,
+    "classname1":"{style.i_b}",
+    "classname2":"{style.i_u}",
+    "backImg":"social_3.png",
+    "title":"Instagram",
+    "link":"https://www.instagram.com/"
+  },{
+    "id":4,
+    "classname1":"{style.p_b}",
+    "classname2":"{style.p_u}",
+    "backImg":"social_4.png",
+    "title":"Pinterest",
+    "link":"https://www.pinterest.com/"
+  }
+]

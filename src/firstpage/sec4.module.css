@@ -1,0 +1,124 @@
+/*-------------------------About us-------------------------*/
+#about{
+	max-width:1400px;
+    padding: 155px 0 300px 0;
+    margin: 0 auto;
+	}
+#about .us{
+	width:100%;
+    padding-bottom: 100px;
+    display: flex;
+	}
+#about .us .aboutUs{
+    width: 210px;
+    height:135px;
+	border-bottom:1px solid #333;
+	border-top:1px solid #333;
+    margin: 0 300px 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#about .us h2{
+	font-family: 'Poiret One', cursive;
+	font-size:30px;
+	font-weight:300;
+    text-align: center;
+    line-height:35px;
+	}
+#about .us h2 span{
+	font-family:Arial, "繁黑體", sans-serif;
+	font-weight:300;
+	font-size:24px;
+	letter-spacing:4px;
+	}
+#about .us .aboutUsContent{
+    width: 40%;
+}
+#about .us .aboutUsContent h3{
+	letter-spacing:1px;
+	font-family:Arial, "微軟正黑體", sans-serif;
+	font-weight:500;
+	line-height:40px;
+	color:#666;
+}
+
+@media (min-width:970px) and (max-width:1169px){
+	#about{
+		width:100%;
+		}
+	#about .us{
+		width:95%;
+		}	
+	#about .us .aboutUs{
+		width: 210px;
+		height:135px;
+		margin: 0 150px 0 150px;
+	}
+	#about .us .aboutUsContent{
+		width: 50%;
+	}
+	}
+
+@media (min-width:769px) and (max-width:969px){
+#about{
+	width:100%;
+	padding: 100px 0 300px 0;
+	}
+#about .us{
+	width:95%;
+	padding-bottom: 0px;
+	}
+#about .us .aboutUs{
+	width: 210px;
+	height:100px;
+	margin: 0 80px 0 60px;
+}
+#about .us h2{
+	font-size:26px;
+	line-height:30px;
+	}
+#about .us h2 span{
+	font-size:20px;
+	}
+#about .us .aboutUsContent{
+	width: 60%;
+}
+#about .us .aboutUsContent h3{
+	line-height:36px;
+}
+}
+
+@media  (max-width:768px){
+#about{
+	width:100%;
+	padding: 60px 0 50px 0;
+	}
+#about .us{
+	width:90%;
+	padding-bottom: 100px;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	}
+#about .us .aboutUs{
+	width: 180px;
+	height:80px;
+	margin: 0 0px 50px 0px;
+}
+#about .us h2{
+	font-size:26px;
+	line-height:30px;
+	}
+#about .us h2 span{
+	font-size:20px;
+	letter-spacing:3px;
+	}
+#about .us .aboutUsContent{
+	width: 100%;
+}
+#about .us .aboutUsContent h3{
+	font-size: 14px;
+	line-height:30px;
+}
+}

@@ -1,0 +1,190 @@
+
+#contact{
+	max-width:1400px;
+    padding: 155px 0 0px 0;
+    margin: 0 auto;
+	}
+#contact .contactWrap{
+	width:100%;
+    padding-bottom: 50px;
+    display: flex;
+	}
+#contact .contactWrap .contactUs{
+    width: 210px;
+    height:135px;
+	border-bottom:1px solid #333;
+	border-top:1px solid #333;
+    margin: 0 300px 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact .contactWrap h2{
+	font-family: 'Poiret One', cursive;
+	font-size:30px;
+	font-weight:300;
+    text-align: center;
+    line-height:35px;
+	}
+#contact .contactWrap h2 span{
+	font-family:Arial, "繁黑體", sans-serif;
+	font-weight:300;
+	font-size:24px;
+	letter-spacing:4px;
+	}
+#contact .contactWrap .contactUsContent{
+    width: 40%;
+}
+#contact .contactWrap .contactUsContent li{
+    margin: 0 0 60px 0;
+	font-weight:300;
+	color:#666;
+	letter-spacing:1px;
+	display: flex;
+}
+#contact .contactWrap .contactUsContent li .contcont{
+	line-height: 30px;
+	margin-left: 20px;
+}
+
+@media (min-width:970px) and (max-width:1169px){
+#contact{
+	width:100%;
+	}
+#contact .contactWrap{
+	width:95%;
+	}
+#contact .contactWrap .contactUs{
+	width: 210px;
+	height:135px;
+	margin: 0 150px 0 150px;
+}
+#contact .contactWrap .contactUsContent{
+	width: 50%;
+}
+}
+
+@media (min-width:769px) and (max-width:969px){
+#contact{
+	width:100%;
+	padding: 100px 0 0px 0;
+	}
+#contact .contactWrap{
+	width:95%;
+	}
+#contact .contactWrap .contactUs{
+	width: 210px;
+	height:100px;
+	margin: 0 80px 0 60px;
+}
+#contact .contactWrap h2{
+	font-size:26px;
+    line-height:30px;
+	}
+#contact .contactWrap h2 span{
+	font-size:20px;
+	}
+#contact .contactWrap .contactUsContent{
+	width: 60%;
+}
+#contact .contactWrap .contactUsContent li .contcont{
+	line-height: 26px;
+	margin-left: 5px;
+}
+#contact .contactWrap .contactUsContent li img{
+	width: 50px;
+}
+}
+
+@media  (max-width:768px){
+#contact{
+	width:100%;
+	padding: 60px 0 0px 0;
+	}
+#contact .contactWrap{
+	width:90%;
+	padding-bottom: 50px;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	}
+#contact .contactWrap .contactUs{
+	width: 180px;
+	height:80px;
+	margin: 0 0px 50px 0px;
+}
+#contact .contactWrap h2{
+	font-size:26px;
+	line-height:30px;
+	}
+#contact .contactWrap h2 span{
+	font-size:20px;
+	}
+#contact .contactWrap h3{
+	line-height:36px;
+}	
+#contact .contactWrap .contactUsContent{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+#contact .contactWrap .contactUsContent li .contcont{
+	line-height: 26px;
+	margin-left: 5px;
+	font-size: 14px;
+}
+#contact .contactWrap .contactUsContent li img{
+	width: 50px;
+}
+/* #serv{
+	width:100%;
+	padding: 60px 0 0px 0;
+}
+#serv .us{
+	width:90%;
+	padding-bottom: 50px;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+}
+#serv .us .aboutUs{
+	width: 180px;
+	height:80px;
+	margin: 0 0px 50px 0px;
+}
+#serv .us .aboutUsContent{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+#serv .us .aboutUsContent li{
+	margin: 0 0 40px 0;
+}
+#serv .us h2{
+	font-size:26px;
+	line-height:30px;
+	}
+#serv .us h2 span{
+	font-size:20px;
+	}
+#serv .us .aboutUsContent h3{
+	line-height:36px;
+}	
+#serv .aboutNav{
+	width: 100%;
+	padding-bottom: 80px;
+	display: flex;
+	justify-content: center;
+}
+#serv .aboutNav ul{
+	width: 80%;
+	padding-top: 0px;
+}
+#serv .aboutNav ul li{
+	margin: 20px 8%;
+}
+#serv .aboutNav ul li img{
+	width: 80px;
+} */
+
+}

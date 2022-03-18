@@ -1,0 +1,233 @@
+#productmenu{
+    width: 100%;
+    padding-bottom: 160px;
+}
+#productmenu .productWrap{
+    width: 100%;
+    position: relative;
+}
+#productmenu .productWrap span{
+    display: block;
+    background-size:contain;
+    background-repeat: no-repeat;
+    padding-bottom: 67%;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.poswid{
+    position: absolute;
+    width: 50%;
+}
+#productmenu .productWrap .pants{
+    top: -24.8%;
+}
+#productmenu .productWrap .vest{
+    top: -24.8%;
+    right: 0;
+}
+#productmenu .productWrap .top{
+    top:25%;
+}
+#productmenu .productWrap .short{
+    top: 25%;
+    right: 0;
+}
+#productmenu .productWrap .accesorries{
+    top:74.2%;
+}
+#productmenu .productWrap .jeans{
+    top: 74.2%;
+    right: 0;
+}
+#productmenu .productWrap .topbtn{
+    position: absolute;
+    width: 160px;
+    top: 110%;
+    right: 0;
+    left:50px;
+    bottom: 0;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+#productmenu .productWrap .topbtn:hover{
+    opacity: 0.6;
+    top: 112%;
+}
+.h3element{
+    color: #fff;
+    font-size: 150px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+#productmenu .productWrap .pants a:hover span,
+#productmenu .productWrap .top a:hover span,
+#productmenu .productWrap .accesorries a:hover span
+{
+    opacity: 0.6;
+    margin-left: -30px;
+}
+#productmenu .productWrap .vest a:hover span,
+#productmenu .productWrap .short a:hover span,
+#productmenu .productWrap .jeans a:hover span
+{
+    opacity: 0.6;
+    margin-left: 30px;
+}
+#productmenu .productWrap .pants a:hover h3,
+#productmenu .productWrap .vest a:hover h3,
+#productmenu .productWrap .top a:hover h3,
+#productmenu .productWrap .short a:hover h3
+{
+    opacity: 1;
+    margin-top: -150px;
+}
+#productmenu .productWrap .accesorries a:hover h3,
+#productmenu .productWrap .jeans a:hover h3{
+    opacity: 1;
+    margin-top: -500px;
+}
+#productmenu .productWrap .pants h3{
+    margin-top: -200px;
+    float: right;
+}
+#productmenu .productWrap .vest h3{
+    margin-top: -200px;
+    float: left;
+}
+#productmenu .productWrap .top h3{
+    margin-top: -200px;
+    float: left;
+}
+#productmenu .productWrap .short h3{
+    margin-top: -200px;
+    float: right;
+}
+#productmenu .productWrap .accesorries h3{
+    margin-top: -450px;
+    float: right;
+}
+#productmenu .productWrap .jeans h3{
+    margin-top: -450px;
+    float: left;
+}
+
+@media (min-width:970px) and (max-width:1169px){
+.h3element{
+    font-size: 120px;
+}
+#productmenu .productWrap .accesorries a:hover h3,
+#productmenu .productWrap .jeans a:hover h3{
+    opacity: 1;
+    margin-top: -300px;
+}
+#productmenu .productWrap .accesorries h3{
+    margin-top: -350px;
+    float: right;
+}
+#productmenu .productWrap .jeans h3{
+    margin-top: -350px;
+    float: left;
+}    
+}
+
+@media (min-width:769px) and (max-width:969px){
+.h3element{
+    font-size: 70px;
+}
+#productmenu .productWrap .pants a:hover h3,
+#productmenu .productWrap .vest a:hover h3,
+#productmenu .productWrap .top a:hover h3,
+#productmenu .productWrap .short a:hover h3
+{
+    opacity: 1;
+    margin-top: -100px;
+}
+#productmenu .productWrap .accesorries a:hover h3,
+#productmenu .productWrap .jeans a:hover h3{
+    opacity: 1;
+    margin-top: -250px;
+}
+#productmenu .productWrap .pants h3{
+    margin-top: -150px;
+    float: right;
+}
+#productmenu .productWrap .vest h3{
+    margin-top: -150px;
+    float: left;
+}
+#productmenu .productWrap .top h3{
+    margin-top: -150px;
+    float: left;
+}
+#productmenu .productWrap .short h3{
+    margin-top: -150px;
+    float: right;
+}
+#productmenu .productWrap .accesorries h3{
+    margin-top: -300px;
+    float: right;
+}
+#productmenu .productWrap .jeans h3{
+    margin-top: -300px;
+    float: left;
+} 
+#productmenu .productWrap .topbtn{
+    width: 120px;
+    top: 110%;
+    right: 0;
+    left:40px;
+    bottom: 0;
+}
+#productmenu .productWrap .topbtn:hover{
+    opacity: 0.6;
+    top: 112%;
+}       
+}
+
+@media  (max-width:768px){
+.h3element{
+    font-size: 40px;
+}
+#productmenu .productWrap .pants a:hover h3,
+#productmenu .productWrap .vest a:hover h3,
+#productmenu .productWrap .top a:hover h3,
+#productmenu .productWrap .short a:hover h3
+{
+    opacity: 1;
+    margin-top: -50px;
+}
+#productmenu .productWrap .accesorries a:hover h3,
+#productmenu .productWrap .jeans a:hover h3{
+    opacity: 1;
+    margin-top: -150px;
+}
+#productmenu .productWrap .pants h3{
+    margin-top: -100px;
+    float: right;
+}
+#productmenu .productWrap .vest h3{
+    margin-top: -100px;
+    float: left;
+}
+#productmenu .productWrap .top h3{
+    margin-top: -100px;
+    float: left;
+}
+#productmenu .productWrap .short h3{
+    margin-top: -100px;
+    float: right;
+}
+#productmenu .productWrap .accesorries h3{
+    margin-top: -200px;
+    float: right;
+}
+#productmenu .productWrap .jeans h3{
+    margin-top: -200px;
+    float: left;
+} 
+#productmenu .productWrap .topbtn{
+    width: 100px;
+    left:30px;
+}   
+}
