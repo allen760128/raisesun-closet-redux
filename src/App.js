@@ -5,6 +5,7 @@ import './reset.css';
 import { Provider } from 'react-redux';
 import Store from './store';
 import P2 from './p2';
+import Test from './test';
 import Pants from './pants';
 import Pantspropage from './pants/pantsProPage';
 import Signpage from './signpage/signIn';
@@ -23,6 +24,7 @@ const App = () => {
           <Route path='pants/pantspropage:id' element={<Pantspropage />}></Route>
           <Route path='/signin' element={<Signpage />}></Route>
           <Route path='/signindata' element={<SigninData />}></Route>
+          <Route path='/test' element={<Test />}></Route>
         </Routes>
       </HashRouter>
     </Provider>

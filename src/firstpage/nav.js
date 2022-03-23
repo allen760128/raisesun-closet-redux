@@ -5,9 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
     handleSingToggle, handleRwdToggle, handleScrollabout,
     handleScrollserv, handleScrollcont, handleSignscroll,
-
 } from '../store/signAction';
-// import { getListItemSecondaryActionClassesUtilityClass } from '@mui/material';
+
 
 const Nav = (props) => {
     const signOpen = useSelector(state => state.sign.signOpen);
@@ -15,8 +14,6 @@ const Nav = (props) => {
     const local = useSelector(state => state.sign.local);
     const [navToggle, setNavtoggle] = useState(false);
     const navigate = useNavigate();
-    // const aboutto=useSelector(state=>state.sign.about);
-    // const proto=useSelector(state=>state.sign.pro);
     const dispatch = useDispatch();
     //因offsetTop必須在函式內，故先定義一個函式包住window物件再dispatch進去
     const srcollAbout = () => {

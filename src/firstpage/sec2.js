@@ -19,7 +19,7 @@ const Sec2 = (props) => {
                 </div>
 
             </div>
-
+            <div className='aaa'></div>
 
         </div>
     );
