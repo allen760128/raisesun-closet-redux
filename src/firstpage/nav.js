@@ -25,7 +25,6 @@ const Nav = (props) => {
     //     window.scrollTo({top:scrollRef,behavior:'smooth'});
     // }
 
-    console.log(local)
     const scrollServ = () => {
         const scrollRef = props.all.services.current.offsetTop;
         window.scrollTo({ top: scrollRef, behavior: 'smooth' });
@@ -75,6 +74,8 @@ const Nav = (props) => {
     }
     const pantsClass = pantsClick ? style.bbDisNone : '';
     const pantsAClass = pantsClick ? style.bbAa : '';
+
+
     return (
         <div id={style.nav} ref={top}>
             <div className={style.rwdMenu} onClick={(e) => { dispatch(handleRwdToggle(e)) }}>
