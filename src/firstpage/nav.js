@@ -21,6 +21,7 @@ const Nav = (props) => {
         window.scrollTo({ top: scrollRef, behavior: 'smooth' });
     }
     console.log('fff')
+    console.log('fff')
     // const scrollPro=()=>{
     //     const scrollRef=props.all.products.current.offsetTop;
     //     window.scrollTo({top:scrollRef,behavior:'smooth'});
