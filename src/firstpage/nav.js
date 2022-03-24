@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
     handleSingToggle, handleRwdToggle, handleScrollabout,
     handleScrollserv, handleScrollcont, handleSignscroll,
+    handleClear,
 } from '../store/signAction';
 
 
@@ -20,8 +21,6 @@ const Nav = (props) => {
         const scrollRef = props.all.about.current.offsetTop;
         window.scrollTo({ top: scrollRef, behavior: 'smooth' });
     }
-    console.log('fff')
-    console.log('fff')
     // const scrollPro=()=>{
     //     const scrollRef=props.all.products.current.offsetTop;
     //     window.scrollTo({top:scrollRef,behavior:'smooth'});
@@ -39,6 +38,7 @@ const Nav = (props) => {
         window.onscroll = (e) => {
             if (window.scrollY >= 300) {
                 dispatch(handleSignscroll(e));
+                dispatch(handleClear());
             }
         }
 
@@ -78,6 +78,10 @@ const Nav = (props) => {
     const pantsAClass = pantsClick ? style.bbAa : '';
 
 
+    const mdToggle = (e) => {
+        dispatch(handleClear());
+        dispatch(handleSingToggle(e))
+    }
     return (
         <div id={style.nav} ref={top}>
             <div className={style.rwdMenu} onClick={(e) => { dispatch(handleRwdToggle(e)) }}>
@@ -105,7 +109,7 @@ const Nav = (props) => {
                 {/* <SignIn styleLeft={signInLeft}/> */}
                 {/* <div className={style.md} ref={MDToggle} style={mdToggle}></div> */}
             </div>
-            <div className={style.navMd} style={navMd} onClick={(e) => { dispatch(handleSingToggle(e)) }}></div>
+            <div className={style.navMd} style={navMd} onClick={(e) => { mdToggle(e) }}></div>
             <div className={style.logoWrap}>
                 <div className={style.logo_line}></div>
                 <div className={style.logo} style={{ backgroundImage: `url(img/logo1.jpg)` }}><Link to='/p2'></Link>

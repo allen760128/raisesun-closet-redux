@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import {
     handleForget, handleJoin, handleIdchange, handleSubmit, handlePasschange,
-    handleIderror, handlePasserror, handleClear
+    handleIderror, handlePasserror, handleClear,
 } from '../store/signAction';
 import {
     handle_login, handle_logout, handle_idError, handle_signin, fetch_data
@@ -16,19 +16,16 @@ const SignIn = (props) => {
     const pass = useSelector(state => state.sign.pass);
     const idError = useSelector(state => state.sign.iderror);
     const passError = useSelector(state => state.sign.passerror);
+    const local = useSelector(state => state.sign.local);
+
     const loading = useSelector(state => state.validation.loading);
     const loggedIn = useSelector(state => state.validation.loggedIn);
     const signIn = useSelector(state => state.validation.signIn);
-    const navigate = useNavigate();
-    const local = useSelector(state => state.sign.local);
-
-    const dispatch = useDispatch();
-    const toggleLogin = { right: signOpen ? '0px' : '-100%' };
-    const regular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/g;
-
-
-
     const signinData = useSelector(state => state.validation.signinData);
+    const toggleLogin = { right: signOpen ? '0px' : '-100%' };
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const usernameData = signinData.filter(c => { return c.username === id });
     const userName = usernameData.map(c => c.username);
     const userPass = usernameData.map(c => c.password);
@@ -72,17 +69,21 @@ const SignIn = (props) => {
     useEffect(() => {
         if (local === '760128') {
             navigate('/signindata');
+            dispatch(handleClear());
         }
     }, [local]);
 
-
+    const handlejoin = (e) => {
+        dispatch(handleClear());
+        dispatch(handleJoin(e))
+    }
 
     return (
         <div className={style.signIn} style={toggleLogin}>
             <div className={style.inner}>
                 <div className={style.top}>
                     <div className={style.topLeft}><span>登入</span></div>
-                    <div className={style.topRight}><span>或<a href="#" onClick={(e) => { dispatch(handleJoin(e)) }}>加入會員</a></span></div>
+                    <div className={style.topRight}><span>或<a href="#" onClick={(e) => { handlejoin(e) }}>加入會員</a></span></div>
                 </div>
                 <div className={style.middle}>
                     <div className={style.middleInner}>
@@ -115,16 +116,6 @@ const SignIn = (props) => {
                         </form>
                     </div>
                 </div>
-                {/* <div className={style.bottom}>
-                    <div className={style.bottomLeft}>
-                        <span>
-                            <a href="#" onClick={handleForget}>忘記密碼</a>
-                        </span>
-                    </div>
-                    <div className={style.bottomRight}>
-                        <button >Login</button>
-                    </div>
-                </div> */}
             </div>
         </div>
     );

@@ -45,7 +45,6 @@ const Signpage = (props) => {
     let navigate = useNavigate();
     const tk = localStorage.getItem('token');
 
-    console.log(signinData)
     //以下為註冊判斷
     const handle_submit1 = (e) => {
         e.preventDefault();

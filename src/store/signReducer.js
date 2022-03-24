@@ -101,10 +101,6 @@ const signReducer = (state = defaultState, action) => {
         case handle_signtoggle: return {
             ...state,
             signOpen: !state.signOpen,
-            id: state.id = '',
-            pass: state.pass = '',
-            iderror: state.iderror = '',
-            passerror: state.passerror = '',
             local: localStorage.getItem('token'),
             rwdToggle: false
         }
@@ -131,21 +127,33 @@ const signReducer = (state = defaultState, action) => {
         case handle_clear: return {
             ...state,
             id: '',
-            password: ''
+            pass: '',
+            iderror: state.iderror = '',
+            passerror: state.passerror = '',
+            idforget: state.idforget = '',
+            idforgeterror: state.idforgeterror = '',
+            mailforget: state.mailforget = '',
+            mailforgeterror: state.mailforgeterror = '',
+            namejoin: '',
+            idjoin: '',
+            passjoin: '',
+            conjoin: '',
+            datejoin: '',
+            phonejoin: '',
+            mailjoin: '',
+            nameforgeterror: '',
+            joinidError: '',
+            joinpassError: '',
+            joinconError: '',
+            joinphoneError: '',
+            joinmailError: '',
+
         }
         //忘記密碼開關
         case handle_forget: return {
             ...state,
             forget: !state.forget,
             signOpen: !state.signOpen,
-            id: state.id = '',
-            pass: state.pass = '',
-            iderror: state.iderror = '',
-            passerror: state.passerror = '',
-            idforget: state.idforget = '',
-            mailforget: state.mailforget = '',
-            idforgeterror: state.idforgeterror = '',
-            mailforgeterror: state.mailforgeterror = '',
             idcheck: false,
             mailcheck: false
         }
@@ -153,37 +161,17 @@ const signReducer = (state = defaultState, action) => {
             ...state,
             forget: state.forget = true,
             signOpen: state.signOpen = true,
-            idforget: state.idforget = '',
-            mailforget: state.mailforget = '',
-            idforgeterror: state.idforgeterror = '',
-            mailforgeterror: state.mailforgeterror = '',
         }
         //加入會員開關
         case handle_join: return {
             ...state,
             join: !state.join,
             signOpen: !state.signOpen,
-            id: state.id = '',
-            pass: state.pass = '',
-            iderror: state.iderror = '',
-            passerror: state.passerror = '',
-            nameforgeterror: '',
-            joinidError: '',
-            joinpassError: '',
-            joinconError: '',
-            joinphoneError: '',
-            joinmailError: '',
         }
         case handle_joincancel: return {
             ...state,
             join: false,
             signOpen: true,
-            nameforgeterror: '',
-            joinidError: '',
-            joinpassError: '',
-            joinconError: '',
-            joinphoneError: '',
-            joinmailError: '',
         }
 
 

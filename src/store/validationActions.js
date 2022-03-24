@@ -14,7 +14,6 @@ import {
     handleSubmit2,
 } from './validationTypes';
 import api from './api';
-import { SocialDistanceOutlined } from '@mui/icons-material';
 import axios from 'axios';
 
 
