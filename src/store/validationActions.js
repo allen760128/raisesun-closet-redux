@@ -174,7 +174,8 @@ export const handle_signinData = (data) => {
 
 
 
-//api
+//api，讀入data
+
 export const fetch_data = () => {
     return async (dispatch) => {
         dispatch(handle_loading());
@@ -189,6 +190,10 @@ export const fetch_data = () => {
         }
     }
 }
+
+
+//api，讀入登入頁api
+
 export const fetch_api = () => {
     return async (dispatch) => {
         dispatch(handle_loading());
@@ -203,6 +208,10 @@ export const fetch_api = () => {
         }
     }
 }
+
+
+
+
 
 export const fetch_updateuser = (item) => {
     return async (dispatch) => {
@@ -241,6 +250,9 @@ export const fetch_updateuser = (item) => {
     }
 }
 
+
+
+
 export const fetchlogin = () => {
     return async (dispatch) => {
         try {
@@ -255,40 +267,3 @@ export const fetchlogin = () => {
     }
 }
 
-export const fetchcsv = () => {
-    return async (dispatch) => {
-        try {
-            function csvJSON(csv) {
-
-                var lines = csv.split("\n");
-
-                var result = [];
-
-                var headers = lines[0].split(",");
-
-                for (var i = 1; i < lines.length; i++) {
-
-                    var obj = {};
-                    var currentline = lines[i].split(",");
-
-                    for (var j = 0; j < headers.length; j++) {
-                        obj[headers[j]] = currentline[j];
-                    }
-
-                    result.push(obj);
-
-                }
-
-                //return result; //JavaScript object
-                return JSON.stringify(result); //JSON
-            }
-
-
-
-            const res = await axios.get('https://www.twse.com.tw/fund/BFI82U?response=csv&dayDate=&weekDate=&monthDate=&type=day');
-            const resData = JSON.parse(csvJSON(res.data));
-            console.log(resData)
-        }
-        catch (err) { }
-    }
-}

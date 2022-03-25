@@ -11,7 +11,7 @@ import DataOrder from './DataOrder';
 import DataFollow from './DataFollow';
 // import { IconContext } from "react-icons";
 import { useNavigate } from 'react-router-dom';
-import { fetch_api, handle_dataliClick, handle_logout, handle_login, fetchlogin, fetchcsv } from '../store/validationActions';
+import { fetch_api, handle_dataliClick, handle_logout, handle_login, fetchlogin, } from '../store/validationActions';
 import { useDispatch, useSelector } from 'react-redux';
 import CircularProgress from '../common/CircularProgress';
 
@@ -24,10 +24,9 @@ const SigninData = (props) => {
     const navigate = useNavigate();
     const tk = localStorage.getItem('token');
 
-    useEffect(() => {
-        dispatch(fetchlogin());
-        dispatch(fetchcsv());
-    }, []);
+    // useEffect(() => {
+    //     dispatch(fetchlogin());
+    // }, []);
 
     const dataLi =
         [{ 'id': 1, 'title': '個人資訊', 'block': <DataInfo></DataInfo> },
@@ -42,20 +41,19 @@ const SigninData = (props) => {
     //     setDatali(id);
     // }
 
+    //剛進入時先抓取user資料並使login=true
     useEffect(() => {
         dispatch(fetch_api());
         dispatch(handle_dataliClick(1));
         dispatch(handle_login());
     }, []);
 
-    console.log(loading);
 
     const handleLogout = (e) => {
         e.preventDefault();
         dispatch(handle_logout());
         localStorage.removeItem('token');
         navigate('/');
-
     }
 
     useEffect(() => {

@@ -176,22 +176,22 @@ const signReducer = (state = defaultState, action) => {
 
 
 
-        case handle_idchange: return {
-            ...state,
-            id: state.id = action.idvalue
-        }
-        case handle_passchange: return {
-            ...state,
-            pass: state.pass = action.passvalue
-        }
-        case handle_iderror: return {
-            ...state,
-            iderror: state.id === '' ? state.iderror = '帳號不為空' : (state.id !== action.payload ? '帳號輸入錯誤' : '')
-        }
-        case handle_passerror: return {
-            ...state,
-            passerror: state.pass === '' ? state.passerror = '密碼不為空' : (state.pass !== action.payload ? '帳號輸入錯誤' : '')
-        }
+        // case handle_idchange: return {
+        //     ...state,
+        //     id: state.id = action.idvalue
+        // }
+        // case handle_passchange: return {
+        //     ...state,
+        //     pass: state.pass = action.passvalue
+        // }
+        // case handle_iderror: return {
+        //     ...state,
+        //     iderror: state.id === '' ? state.iderror = '帳號不為空' : (state.id !== action.payload ? '帳號輸入錯誤' : '')
+        // }
+        // case handle_passerror: return {
+        //     ...state,
+        //     passerror: state.pass === '' ? state.passerror = '密碼不為空' : (state.pass !== action.payload ? '帳號輸入錯誤' : '')
+        // }
         // case handlesubmit:return {
         //     ...state,
         //     iderror:state.id==='' ? state.iderror='帳號不為空' :  state.id.match(action.reg) ? state.iderror='' : state.iderror='請填入大小寫英數共8位數',
@@ -219,43 +219,43 @@ const signReducer = (state = defaultState, action) => {
 
 
 
-        case handle_namejoin: return {
-            ...state,
-            namejoin: action.namejoinvalue
-        }
-        case handle_idjoin: return {
-            ...state,
-            idjoin: action.idjoinvalue
-        }
-        case handle_passjoin: return {
-            ...state,
-            passjoin: action.passjoinvalue
-        }
-        case handle_conjoin: return {
-            ...state,
-            conjoin: action.conjoinvalue
-        }
-        case handle_datejoin: return {
-            ...state,
-            datejoin: action.datejoinvalue
-        }
-        case handle_phonejoin: return {
-            ...state,
-            phonejoin: action.phonejoinvalue
-        }
-        case handle_mailjoin: return {
-            ...state,
-            mailjoin: action.mailjoinvalue
-        }
-        case handle_joinsubmit: return {
-            ...state,
-            nameforgeterror: state.namejoin === '' ? state.nameforgeterror = '姓名不為空' : state.namejoin.match(action.chiness) ? state.nameforgeterror = '' : state.nameforgeterror = '請填入正確格式',
-            joinidError: state.idjoin === '' ? state.joinidError = '帳號不為空' : state.idjoin.match(action.regular) ? state.joinidError = '' : state.joinidError = '請填入大小寫英數共8位數',
-            joinpassError: state.passjoin === '' ? state.joinpassError = '密碼不為空' : state.passjoin.match(action.regular) ? state.joinpassError = '' : state.joinpassError = '請填入大小寫英數共8位數',
-            joinconError: state.conjoin === '' ? state.joinconError = '密碼不為空' : state.conjoin.match(action.regular) ? state.joinconError = '' : state.joinconError = '請填入大小寫英數共8位數' && state.passjoin === state.conjoin ? state.joinconError = '' : state.joinconError = '請輸入相同密碼',
-            joinphoneError: state.phonejoin === '' ? state.joinphoneError = '電話不為空' : state.phonejoin.match(action.cell) ? state.joinphoneError = '' : state.joinphoneError = '請填入正確格式',
-            joinmailError: state.mailjoin === '' ? state.joinmailError = '電子郵件不為空' : state.mailjoin.match(action.mailregular) ? state.joinmailError = '' : state.joinmailError = '請填入正確格式',
-        }
+        // case handle_namejoin: return {
+        //     ...state,
+        //     namejoin: action.namejoinvalue
+        // }
+        // case handle_idjoin: return {
+        //     ...state,
+        //     idjoin: action.idjoinvalue
+        // }
+        // case handle_passjoin: return {
+        //     ...state,
+        //     passjoin: action.passjoinvalue
+        // }
+        // case handle_conjoin: return {
+        //     ...state,
+        //     conjoin: action.conjoinvalue
+        // }
+        // case handle_datejoin: return {
+        //     ...state,
+        //     datejoin: action.datejoinvalue
+        // }
+        // case handle_phonejoin: return {
+        //     ...state,
+        //     phonejoin: action.phonejoinvalue
+        // }
+        // case handle_mailjoin: return {
+        //     ...state,
+        //     mailjoin: action.mailjoinvalue
+        // }
+        // case handle_joinsubmit: return {
+        //     ...state,
+        //     nameforgeterror: state.namejoin === '' ? state.nameforgeterror = '姓名不為空' : state.namejoin.match(action.chiness) ? state.nameforgeterror = '' : state.nameforgeterror = '請填入正確格式',
+        //     joinidError: state.idjoin === '' ? state.joinidError = '帳號不為空' : state.idjoin.match(action.regular) ? state.joinidError = '' : state.joinidError = '請填入大小寫英數共8位數',
+        //     joinpassError: state.passjoin === '' ? state.joinpassError = '密碼不為空' : state.passjoin.match(action.regular) ? state.joinpassError = '' : state.joinpassError = '請填入大小寫英數共8位數',
+        //     joinconError: state.conjoin === '' ? state.joinconError = '密碼不為空' : state.conjoin.match(action.regular) ? state.joinconError = '' : state.joinconError = '請填入大小寫英數共8位數' && state.passjoin === state.conjoin ? state.joinconError = '' : state.joinconError = '請輸入相同密碼',
+        //     joinphoneError: state.phonejoin === '' ? state.joinphoneError = '電話不為空' : state.phonejoin.match(action.cell) ? state.joinphoneError = '' : state.joinphoneError = '請填入正確格式',
+        //     joinmailError: state.mailjoin === '' ? state.joinmailError = '電子郵件不為空' : state.mailjoin.match(action.mailregular) ? state.joinmailError = '' : state.joinmailError = '請填入正確格式',
+        // }
         default: return state;
     }
 }

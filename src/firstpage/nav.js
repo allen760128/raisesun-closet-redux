@@ -7,25 +7,25 @@ import {
     handleScrollserv, handleScrollcont, handleSignscroll,
     handleClear,
 } from '../store/signAction';
+import {
+    handle_allclear,
+} from '../store/validationActions';
 
 
 const Nav = (props) => {
     const signOpen = useSelector(state => state.sign.signOpen);
     const rwdToggle = useSelector(state => state.sign.rwdToggle);
-    const local = useSelector(state => state.sign.local);
+    const local = localStorage.getItem('token');
     const [navToggle, setNavtoggle] = useState(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
+
     //因offsetTop必須在函式內，故先定義一個函式包住window物件再dispatch進去
     const srcollAbout = () => {
         const scrollRef = props.all.about.current.offsetTop;
         window.scrollTo({ top: scrollRef, behavior: 'smooth' });
     }
-    // const scrollPro=()=>{
-    //     const scrollRef=props.all.products.current.offsetTop;
-    //     window.scrollTo({top:scrollRef,behavior:'smooth'});
-    // }
-
     const scrollServ = () => {
         const scrollRef = props.all.services.current.offsetTop;
         window.scrollTo({ top: scrollRef, behavior: 'smooth' });
@@ -34,20 +34,26 @@ const Nav = (props) => {
         const scrollRef = props.all.contact.current.offsetTop;
         window.scrollTo({ top: scrollRef, behavior: 'smooth' });
     }
+
+
+    //往下滑動300px會收起nav並清除input
     useEffect(() => {
         window.onscroll = (e) => {
             if (window.scrollY >= 300) {
                 dispatch(handleSignscroll(e));
                 dispatch(handleClear());
+                dispatch(handle_allclear());
             }
         }
-
     }, [signOpen]);
 
-    const handleDefault = (e) => {
-        e.preventDefault();
-    }
-    console.log()
+
+    //一開始先清除一次sign input
+    useEffect(() => {
+        dispatch(handle_allclear());
+    }, []);
+
+
     //nav product小於969px加上onclick
     useEffect(() => {
         document.body.offsetWidth < 969 ? setNavtoggle(true) : setNavtoggle(false);
@@ -58,9 +64,6 @@ const Nav = (props) => {
     const navClick = navToggle ? (e) => { handleClick(e) } : (e) => { e.preventDefault() };
 
 
-    // useEffect(() => {
-    //     if (local) { navigate('/signindata'); }
-    // }, [local]);
 
     const [pantsClick, setPantsClick] = useState(false)
     const top = props.refTop;
@@ -78,10 +81,20 @@ const Nav = (props) => {
     const pantsAClass = pantsClick ? style.bbAa : '';
 
 
+    //在nav toggle後清除input
     const mdToggle = (e) => {
         dispatch(handleClear());
-        dispatch(handleSingToggle(e))
+        dispatch(handleSingToggle(e));
+        dispatch(handle_allclear());
     }
+
+
+    //登入狀態時，回到首頁要再按sign in會直接跳入signData
+    const signswitch =
+        local === '760128' ? navigate('/signindata')
+            : (e) => { dispatch(handleSingToggle(e)) }
+
+
     return (
         <div id={style.nav} ref={top}>
             <div className={style.rwdMenu} onClick={(e) => { dispatch(handleRwdToggle(e)) }}>
@@ -104,7 +117,7 @@ const Nav = (props) => {
                     </li>
                     <li className={style.cc} onClick={(e) => { dispatch(handleScrollserv(e, scrollServ())) }}><a href="#">III. Services</a></li>
                     <li className={style.dd} onClick={(e) => { dispatch(handleScrollcont(e, scrollCont())) }}><a href="#">IV. Contact</a></li>
-                    <li className={style.sign} onClick={(e) => { dispatch(handleSingToggle(e)) }}><a href="#">V. Sign In</a></li>
+                    <li className={style.sign} onClick={signswitch}><a href="#">V. Sign In</a></li>
                 </ul>
                 {/* <SignIn styleLeft={signInLeft}/> */}
                 {/* <div className={style.md} ref={MDToggle} style={mdToggle}></div> */}

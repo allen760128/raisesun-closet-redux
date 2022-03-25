@@ -2,21 +2,22 @@ import React, { useEffect } from 'react';
 import style from './signin.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import CircularProgress from '../common/CircularProgress';
 import {
     handleForget, handleJoin, handleIdchange, handleSubmit, handlePasschange,
     handleIderror, handlePasserror, handleClear,
 } from '../store/signAction';
 import {
-    handle_login, handle_logout, handle_idError, handle_signin, fetch_data
+    handle_login, handle_logout, fetch_data, handle_logid,
+    handle_logpass, handle_allclear, handle_idError, handle_passError
 } from '../store/validationActions';
 
 const SignIn = (props) => {
     const signOpen = useSelector(state => state.sign.signOpen);
-    const id = useSelector(state => state.sign.id);
-    const pass = useSelector(state => state.sign.pass);
-    const idError = useSelector(state => state.sign.iderror);
-    const passError = useSelector(state => state.sign.passerror);
-    const local = useSelector(state => state.sign.local);
+    const changeLogid = useSelector(state => state.validation.changeLogid);
+    const changeLogpass = useSelector(state => state.validation.changeLogpass);
+    const switchIdError = useSelector(state => state.validation.switchIdError);
+    const switchPassError = useSelector(state => state.validation.switchPassError);
 
     const loading = useSelector(state => state.validation.loading);
     const loggedIn = useSelector(state => state.validation.loggedIn);
@@ -26,7 +27,7 @@ const SignIn = (props) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const usernameData = signinData.filter(c => { return c.username === id });
+    const usernameData = signinData.filter(c => { return c.username === changeLogid });
     const userName = usernameData.map(c => c.username);
     const userPass = usernameData.map(c => c.password);
     const handle_submit = (e) => {
@@ -50,15 +51,14 @@ const SignIn = (props) => {
     useEffect(() => {
         //偵測signinData起初空陣列，不能直接用[]，得得知他是否個數等不等於0
         if (signinData.length !== 0) {
-            if (id === String(userName) && pass === String(userPass) && id !== '' && pass !== '') {
+            if (changeLogid === String(userName) && changeLogpass === String(userPass) && changeLogid !== '' && changeLogpass !== '') {
 
                 localStorage.setItem('token', '760128');
                 dispatch(handle_login());
-                dispatch(handleClear());
                 navigate('/signindata');
             } else {
-                dispatch(handleIderror(String(userName)));
-                dispatch(handlePasserror(String(userPass)));
+                dispatch(handle_idError(String(userName)));
+                dispatch(handle_passError(String(userPass)));
                 dispatch(handle_logout());
             }
         }
@@ -66,12 +66,12 @@ const SignIn = (props) => {
     }, [signinData]);
 
     //按下signin會發送出有無偵測到token，並重新定向
-    useEffect(() => {
-        if (local === '760128') {
-            navigate('/signindata');
-            dispatch(handleClear());
-        }
-    }, [local]);
+    // useEffect(() => {
+    //     if (local === '760128') {
+    //         navigate('/signindata');
+    //         dispatch(handleClear());
+    //     }
+    // }, [local]);
 
     const handlejoin = (e) => {
         dispatch(handleClear());
@@ -91,16 +91,16 @@ const SignIn = (props) => {
                         <form action="#">
                             <div className={style.idWrap}>
                                 <label htmlFor="">會員帳號</label>
-                                <input type="text" placeholder='帳號:johnd' maxLength='8' value={id} onChange={(e) => { dispatch(handleIdchange(e)) }} />
+                                <input type="text" placeholder='帳號:johnd' maxLength='8' value={changeLogid} onChange={(e) => { dispatch(handle_logid(e)) }} />
                             </div>
-                            <span className={style.iderror}>{loading ? '' : idError}</span>
+                            <span className={style.iderror}>{loading ? '' : switchIdError}</span>
                             <div className={style.passWrap}>
                                 <label htmlFor="">會員密碼</label>
-                                <input type="password" maxLength='8' placeholder='密碼:m38rmF$' value={pass} onChange={(e) => { dispatch(handlePasschange(e)) }} />
+                                <input type="password" maxLength='8' placeholder='密碼:m38rmF$' value={changeLogpass} onChange={(e) => { dispatch(handle_logpass(e)) }} />
                             </div>
-                            <span className={style.passerror}>{loading ? '' : passError}</span>
+                            <span className={style.passerror}>{loading ? '' : switchPassError}</span>
                             <div className={style.remem}>
-                                <input type="checkbox" />
+                                <input type="checkbox" onChange={() => { }} />
                                 <label htmlFor="">記住我</label>
                             </div>
                             <div className={style.loginWrap}>
