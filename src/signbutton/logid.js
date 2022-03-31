@@ -18,7 +18,7 @@ const Normal2 = (props) => {
         setFocus(false);
     };
     const focusStyle = { border: focus && '2px solid #00E3E3', padding: focus && '0px 0 0px 9px' };
-    // console.log(change)
+
     return (
         <div className={style.inputWrap}>
             <input type={typeProps}
@@ -33,6 +33,8 @@ const Normal2 = (props) => {
             <span >{loading ? '' : switchIdError}</span>
         </div>
     )
+
+
 }
 
 export default Normal2;

@@ -55,12 +55,25 @@
     margin-bottom: 10px;
 }
 .forgetWrap .inner .innerWrap form .idWrap input,
-.forgetWrap .inner .innerWrap form .emailWrap input{
+ .emailWrap input{
     width: 80%;
     height: 25px;
     margin-bottom: 5px;
     padding-left: 5px;
+
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    border: 1px solid rgb(214, 214, 214);
+    outline:none;
+    border-radius: 5px;
+    transition: 0.1s all ease-in-out;
 }
+.forgetWrap .inner .innerWrap form .idWrap input:focus,
+ .emailWrap input:focus{
+    border: 2px solid #00E3E3;
+    padding:0px 0 0px 4px;
+ }
 .forgetWrap .inner .innerWrap form .iderror,
 .forgetWrap .inner .innerWrap form .emailerror{
     display: block;

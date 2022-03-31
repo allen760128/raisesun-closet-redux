@@ -22,3 +22,4 @@ export const handleAddress = 'handleAddress';
 export const handleDataliClick = 'handleDataliClick';
 export const handleSigninData = 'handleSigninData';
 export const handleLoading = 'handleLoading';
+export const handleTest = 'handleTest';

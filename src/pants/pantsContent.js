@@ -8,6 +8,7 @@ import { fetchPantsData, handleChangePage, handleCart, handlePassData } from '..
 import { useDispatch, useSelector } from 'react-redux';
 import CircularIndeterminate from '../common/CircularProgress';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 const PantsContent = () => {
     const dispatch = useDispatch();
@@ -23,11 +24,27 @@ const PantsContent = () => {
 
     const [resize, setResize] = useState(true);
 
+    //text
+    // async function fetch() {
+    //     try {
+    //         const res = await axios.get('https://jsonplaceholder.typicode.com/users');
+    //         const resData = res.data;
+    //         console.log(resData);
+    //         // dispatch(test(resData));
+    //     }
+    //     catch (err) {
+    //         console.log(err)
+    //     }
+    // }
+
+
+    useEffect(() => {
+        // fetch()
+    }, []);
 
     useEffect(() => {
         window.scrollTo({ top: 0 });
         dispatch(fetchPantsData());
-
     }, []);
     useEffect(() => {
         window.scrollTo({ top: 0 });

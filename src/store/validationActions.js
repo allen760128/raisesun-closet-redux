@@ -11,7 +11,7 @@ import {
     handleCity, handleZipcode,
     handleAddress, handleDataliClick,
     handleSigninData, handleLoading,
-    handleSubmit2,
+    handleSubmit2, handleTest,
 } from './validationTypes';
 import api from './api';
 import axios from 'axios';
@@ -204,7 +204,7 @@ export const fetch_api = () => {
             dispatch(handle_fakeData(resData));
         }
         catch (err) {
-            console.log(8787)
+            console.log('error')
         }
     }
 }
@@ -263,7 +263,29 @@ export const fetchlogin = () => {
             const res = await api.post('https://fakestoreapi.com/auth/login', request);
             console.log(res.data);
         }
-        catch (err) { }
+        catch (err) { console.log('error') }
     }
 }
 
+//testData
+export const test = (data) => {
+    return {
+        type: handleTest,
+        payload: data,
+    }
+}
+
+//test
+export const fetchTest = () => {
+    return async (dispatch) => {
+        try {
+            const res = await axios.get('https://jsonplaceholder.typicode.com/comments?postId=2');
+            const resData = res.data;
+            // console.log(resData);
+            dispatch(test(resData));
+        }
+        catch (err) {
+            console.log('error')
+        }
+    }
+}

@@ -77,6 +77,19 @@
     height: 25px;
     width: 70%;
     padding-left: 5px;
+
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    border: 1px solid rgb(214, 214, 214);
+    outline:none;
+    border-radius: 5px;
+    transition: 0.1s all ease-in-out;
+}
+.signIn .inner .middle .middleInner form>div:first-child>input:focus,
+.signIn .inner .middle .middleInner form>div:nth-child(3)>input:focus{
+    border: 2px solid #00E3E3;
+    padding:0px 0 0px 4px;
 }
 .signIn .inner .middle .middleInner form .idWrap,
 .signIn .inner .middle .middleInner form .passWrap
@@ -123,7 +136,7 @@
     display: flex;
     justify-content: end;
 }
-.signIn .inner .middle .middleInner form .loginWrap .loginRight input{
+.signIn .inner .middle .middleInner form .loginWrap .loginRight button{
     background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
     width:100px;
 	height:30px;
@@ -132,8 +145,11 @@
     color: #fff;
     font-size: 16px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.signIn .inner .middle .middleInner form .loginWrap .loginRight input:active{
+.signIn .inner .middle .middleInner form .loginWrap .loginRight button:active{
     background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 20%,#05abe0 60%);  
 }
 
@@ -185,7 +201,7 @@
 .signIn .inner .middle .middleInner form .loginWrap{
     height: 30px;
 }
-.signIn .inner .middle .middleInner form .loginWrap .loginRight input{
+.signIn .inner .middle .middleInner form .loginWrap .loginRight button{
     width:80px;
     height:25px;
     font-size: 14px;
@@ -308,7 +324,7 @@
 .signIn .inner .middle .middleInner form .loginWrap{
     height: 30px;
 }
-.signIn .inner .middle .middleInner form .loginWrap .loginRight input{
+.signIn .inner .middle .middleInner form .loginWrap .loginRight button{
     width:80px;
     height:25px;
     font-size: 14px;
@@ -325,8 +341,11 @@
 }
 .signIn .inner{
     width: 90%;
-    margin-top: 50px;
+    margin-top: 30px;
     height: 500px;
+}
+.signIn .inner .top{
+    margin-bottom: 10px;
 }
 .signIn .inner .middle{
     height: 330px;
@@ -391,7 +410,7 @@
     display: flex;
     justify-content: center;
 }
-.signIn .inner .middle .middleInner form .loginWrap .loginRight input{
+.signIn .inner .middle .middleInner form .loginWrap .loginRight button{
     background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
     width:120px;
 	height:30px;

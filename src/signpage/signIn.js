@@ -20,6 +20,7 @@ import {
     handle_idError, handle_passError, handle_allclear, handle_login,
     handle_logout, handle_signIdError, handle_signin, fetch_data,
 } from '../store/validationActions';
+import CircularProgress from '../common/CircularProgress';
 
 const Signpage = (props) => {
     const [signToggle, setSignToggle] = useState(true);
@@ -36,6 +37,7 @@ const Signpage = (props) => {
     const changeLogpass = useSelector(state => state.validation.changeLogpass);
     const loggedIn = useSelector(state => state.validation.loggedIn);
     const signinData = useSelector(state => state.validation.signinData);
+    const loading = useSelector(state => state.validation.loading);
     const regular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/g;
     const mailregular = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g;
     const chiness = /^[\u4e00-\u9fa5]{0,}$/g;
@@ -171,9 +173,10 @@ const Signpage = (props) => {
                             <Logid name={'帳號:johnd'} types={'text'}></Logid>
                             <Logpass name={'密碼:m38rmF$'} types={'password'}></Logpass>
                             <div className={style.buttonWrap}>
-                                <Button2 types={'button'} name={'開始購物吧'}
+                                <button onClick={(e) => { handle_submit2(e) }}>{loading ? <CircularProgress clo={"inherit"} si={15} /> : '登入'}</button>
+                                {/* <Button2 types={'button'} name={'開始購物吧'}
                                     click={handle_submit2}
-                                ></Button2>
+                                ></Button2> */}
                             </div>
                         </form>
                     </div>

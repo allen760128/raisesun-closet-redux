@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './signin.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +11,8 @@ import {
     handle_login, handle_logout, fetch_data, handle_logid,
     handle_logpass, handle_allclear, handle_idError, handle_passError
 } from '../store/validationActions';
+import Logid from '../signbutton/logid';
+import Logpass from '../signbutton/logpass';
 
 const SignIn = (props) => {
     const signOpen = useSelector(state => state.sign.signOpen);
@@ -92,11 +94,13 @@ const SignIn = (props) => {
                             <div className={style.idWrap}>
                                 <label htmlFor="">會員帳號</label>
                                 <input type="text" placeholder='帳號:johnd' maxLength='8' value={changeLogid} onChange={(e) => { dispatch(handle_logid(e)) }} />
+                                {/* <Logid name={'帳號:johnd'} types={'text'}></Logid> */}
                             </div>
                             <span className={style.iderror}>{loading ? '' : switchIdError}</span>
                             <div className={style.passWrap}>
                                 <label htmlFor="">會員密碼</label>
                                 <input type="password" maxLength='8' placeholder='密碼:m38rmF$' value={changeLogpass} onChange={(e) => { dispatch(handle_logpass(e)) }} />
+                                {/* <Logpass name={'密碼:m38rmF$'} types={'password'}></Logpass> */}
                             </div>
                             <span className={style.passerror}>{loading ? '' : switchPassError}</span>
                             <div className={style.remem}>
@@ -110,7 +114,8 @@ const SignIn = (props) => {
                                     </span>
                                 </div>
                                 <div className={style.loginRight}>
-                                    <input type='button' value={loading ? 'Loading' : 'Login'} onClick={(e) => { handle_submit(e) }} />
+                                    {/* <input type='button' value={loading ? 'Loading' : 'Login'} onClick={(e) => { handle_submit(e) }} /> */}
+                                    <button onClick={(e) => { handle_submit(e) }}>{loading ? <CircularProgress clo={"inherit"} si={15} /> : '登入'}</button>
                                 </div>
                             </div>
                         </form>

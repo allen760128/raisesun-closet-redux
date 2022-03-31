@@ -39,7 +39,7 @@ const Pantspropage = () => {
     // useEffect(() => {
     //     spic === '' ? setProimg(pageData.image) : setProimg(cartImg);
     // }, [cartImg]);
-    console.log(id)
+
 
     const img = [{ 'id': 1, 'image': 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg' },
     { 'id': 2, 'image': 'https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg' },
@@ -60,7 +60,6 @@ const Pantspropage = () => {
     for (let i = 0; i < rating; i++) {
         x = ratingArray.push(i);
     }
-
     const handleSelect = (x) => {
         setSelect(x);
         x === 1 ? setImg(true) : setImg(false);

@@ -11,7 +11,7 @@ import DataOrder from './DataOrder';
 import DataFollow from './DataFollow';
 // import { IconContext } from "react-icons";
 import { useNavigate } from 'react-router-dom';
-import { fetch_api, handle_dataliClick, handle_logout, handle_login, fetchlogin, } from '../store/validationActions';
+import { fetch_api, handle_dataliClick, handle_logout, handle_login, fetchlogin, fetchTest } from '../store/validationActions';
 import { useDispatch, useSelector } from 'react-redux';
 import CircularProgress from '../common/CircularProgress';
 
@@ -23,10 +23,13 @@ const SigninData = (props) => {
     const loading = useSelector(state => state.validation.loading);
     const navigate = useNavigate();
     const tk = localStorage.getItem('token');
+    const testData = useSelector(state => state.validation.testData);
 
-    // useEffect(() => {
-    //     dispatch(fetchlogin());
-    // }, []);
+    //text
+    useEffect(() => {
+        dispatch(fetchTest());
+    }, []);
+    console.log(testData.map(c => c))
 
     const dataLi =
         [{ 'id': 1, 'title': '個人資訊', 'block': <DataInfo></DataInfo> },

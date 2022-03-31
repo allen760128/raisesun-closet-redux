@@ -11,7 +11,7 @@ import {
     handleCity, handleZipcode,
     handleAddress, handleDataliClick,
     handleSigninData, handleLoading,
-    handleSubmit2,
+    handleSubmit2, handleTest,
 } from './validationTypes';
 
 const initialState = {
@@ -44,6 +44,7 @@ const initialState = {
     signinData: [],
     loading: false,
     store: localStorage.getItem('token'),
+    testData: [],
 }
 const regular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/g;
 const mailregular = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g;
@@ -192,7 +193,10 @@ const ValidationReducer = (state = initialState, action) => {
             ...state,
             detailId: action.payload
         }
-
+        case handleTest: return {
+            ...state,
+            testData: action.payload
+        }
 
         default: return state;
     }
