@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './signin.module.css';
 import Nav from '../common/nav';
 import Footer from '../common/footer';
 import Button1 from '../signbutton/button1';
-import Button2 from '../signbutton/button2';
 import Name from '../signbutton/name';
 import Id from '../signbutton/id';
 import Password from '../signbutton/password';
@@ -13,7 +12,6 @@ import Phone from '../signbutton/phone';
 import Email from '../signbutton/email';
 import Logid from '../signbutton/logid';
 import Logpass from '../signbutton/logpass';
-import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -32,7 +30,7 @@ const Signpage = (props) => {
     const changeBirth = useSelector(state => state.validation.changeBirth);
     const changePhone = useSelector(state => state.validation.changePhone);
     const changeEmail = useSelector(state => state.validation.changeEmail);
-    const signIn = useSelector(state => state.validation.signIn);
+    // const signIn = useSelector(state => state.validation.signIn);
     const changeLogid = useSelector(state => state.validation.changeLogid);
     const changeLogpass = useSelector(state => state.validation.changeLogpass);
     const loggedIn = useSelector(state => state.validation.loggedIn);
@@ -40,7 +38,7 @@ const Signpage = (props) => {
     const loading = useSelector(state => state.validation.loading);
     const regular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/g;
     const mailregular = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g;
-    const chiness = /^[\u4e00-\u9fa5]{0,}$/g;
+    // const chiness = /^[\u4e00-\u9fa5]{0,}$/g;
     const cell = /^09[0-9]{8}$/g;
     // const [loggedIn, setLogin] = useState('');
     const dispatch = useDispatch();
@@ -99,7 +97,7 @@ const Signpage = (props) => {
 
                 localStorage.setItem('token', '760128');
                 dispatch(handle_login());
-                dispatch(handle_allclear());
+                dispatch(handle_allclear());//這邊才是離開後把所有資料清除
                 navigate('/signindata');
 
             } else {
@@ -113,7 +111,7 @@ const Signpage = (props) => {
 
 
     // console.log(signinData)
-    //偵測是否有login
+    //偵測是否有login並跳轉
     useEffect(() => {
         if (tk === '760128') {
             navigate('/signindata');

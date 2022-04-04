@@ -11,7 +11,7 @@ import {
     handleCity, handleZipcode,
     handleAddress, handleDataliClick,
     handleSigninData, handleLoading,
-    handleSubmit2, handleTest,
+    handleTest,
 } from './validationTypes';
 
 const initialState = {
@@ -48,7 +48,7 @@ const initialState = {
 }
 const regular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/g;
 const mailregular = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g;
-const chiness = /^[\u4e00-\u9fa5]{0,}$/g;
+// const chiness = /^[\u4e00-\u9fa5]{0,}$/g;
 const cell = /^09[0-9]{8}$/g;
 
 const ValidationReducer = (state = initialState, action) => {

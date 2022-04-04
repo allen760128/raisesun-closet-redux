@@ -11,7 +11,7 @@ import {
     handleCity, handleZipcode,
     handleAddress, handleDataliClick,
     handleSigninData, handleLoading,
-    handleSubmit2, handleTest,
+    handleTest,
 } from './validationTypes';
 import api from './api';
 import axios from 'axios';

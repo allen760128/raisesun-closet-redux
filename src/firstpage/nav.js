@@ -60,7 +60,10 @@ const Nav = (props) => {
             setNavtoggle(document.body.offsetWidth < 969 ? true : false);
         }
     }, []);
-    const navClick = navToggle ? (e) => { handleClick(e) } : (e) => { e.preventDefault() };
+    const navClick = (e) => {
+        navToggle ? handleClick(e)
+            : e.preventDefault()
+    }
 
 
 
@@ -75,7 +78,6 @@ const Nav = (props) => {
     const handleClick = (e) => {
         e.preventDefault();
         setPantsClick(!pantsClick);
-        console.log('hit')
     }
     const pantsClass = pantsClick ? style.bbDisNone : '';
     const pantsAClass = pantsClick ? style.bbAa : '';
@@ -110,7 +112,7 @@ const Nav = (props) => {
                 <ul className="menu" style={menuLeft}>
                     <li className={style.aa} onClick={(e) => { dispatch(handleScrollabout(e, srcollAbout())) }}><a href="/#">I. About</a></li>
 
-                    <li className={pantsClick ? ` ${style.bbHeight350}` : style.bb} onClick={navClick} ><a href="/#">II. Products</a>
+                    <li className={pantsClick ? ` ${style.bbHeight350}` : style.bb} onClick={(e) => { navClick(e) }} ><a href="/#">II. Products</a>
                         <ul className={pantsClick ? style.bbUl : ''}>
                             <li className={pantsClass} onClick={(e) => { dispatch(handleRwdToggle(e)) }}><Link to='/pants' className={pantsAClass}>Pants</Link></li>
                             <li className={pantsClass} onClick={(e) => { dispatch(handleRwdToggle(e)) }}><Link to='/pants' className={pantsAClass}>Vest</Link></li>
@@ -127,7 +129,7 @@ const Nav = (props) => {
                 {/* <SignIn styleLeft={signInLeft}/> */}
                 {/* <div className={style.md} ref={MDToggle} style={mdToggle}></div> */}
             </div>
-            <div className={style.navMd} style={navMd} onClick={mdToggle}></div>
+            <div className={style.navMd} style={navMd} onClick={(e) => { mdToggle(e) }}></div>
             <div className={style.logoWrap}>
                 <div className={style.logo_line}></div>
                 <div className={style.logo} style={{ backgroundImage: `url(img/logo1.jpg)` }}><Link to='/p2'></Link>

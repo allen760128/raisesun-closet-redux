@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import style from './nav.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { handleRwdToggle, handleMd, handleLocalfalse, } from '../store/signAction';
+import { handleSignin } from '../store/validationTypes';
 // import { useNavigate } from 'react-router-dom';
 
 const Nav = (props) => {
@@ -14,6 +15,8 @@ const Nav = (props) => {
     // const aboutto=useSelector(state=>state.sign.about);
     // const proto=useSelector(state=>state.sign.pro);
     const dispatch = useDispatch();
+    const local = localStorage.getItem('token');
+    const navigate = useNavigate();
 
     const top = props.refTop;
     const navMd = { right: rwdToggle ? '0' : '-100%' };
@@ -56,6 +59,11 @@ const Nav = (props) => {
         e.preventDefault();
     }
 
+    const handleSignin = () => {
+        local === '760128' ? navigate('/signindata')
+            : navigate('/signin')
+    }
+
     return (
         <div id={style.nav} ref={top}>
             <div className={style.rwdMenu} onClick={(e) => { dispatch(handleRwdToggle(e)) }}>
@@ -71,8 +79,8 @@ const Nav = (props) => {
                 </div>
 
                 <ul className={style.menu}>
-                    <li className={style.aa} onClick={(e) => { dispatch(handleRwdToggle(e)) }}><Link to='/#'>I. Raise Sun</Link></li>
-                    <li className={pantsClick ? ` ${style.bbHeight350}` : style.bb} onClick={navClick} ><a href="/#">II. Products</a>
+                    <li className={style.aa} onClick={(e) => { dispatch(handleRwdToggle(e)) }}><Link to='/'>I. Raise Sun</Link></li>
+                    <li className={pantsClick ? ` ${style.bbHeight350}` : style.bb} onClick={navClick} ><a href="/#" onClick={handleDefault}>II. Products</a>
                         <ul className={pantsClick ? style.bbUl : ''}>
                             <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Pants</Link></li>
                             <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Vest</Link></li>
@@ -82,9 +90,9 @@ const Nav = (props) => {
                             <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Jeans</Link></li>
                         </ul>
                     </li>
-                    <li className={style.cc} onClick={handleDefault}><a href="/#">III. Services</a></li>
-                    <li className={style.dd} onClick={handleDefault}><a href="/#">IV. Contact</a></li>
-                    <li className={style.sign}><Link to='/signin'>V. Sign In</Link></li>
+                    <li className={style.cc} onClick={handleDefault}><a href="/#" onClick={handleDefault}>III. Services</a></li>
+                    <li className={style.dd} onClick={handleDefault}><Link to='/pants'>IV. Contact</Link></li>
+                    <li className={style.sign} onClick={() => { handleSignin() }}><a href='/#' onClick={handleDefault}>V. Sign In</a></li>
                 </ul>
 
                 {/* <SignIn styleLeft={signInLeft}/> */}

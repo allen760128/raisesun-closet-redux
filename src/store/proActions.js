@@ -9,7 +9,6 @@ import {
     handle_passData
 } from './proTypes';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
 
 export const handleDefault = (e) => {
     return {

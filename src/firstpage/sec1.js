@@ -28,8 +28,8 @@ const Sec1 = (props) => {
                 <div className={style.slideshowIndicator}>
                     {picData.map((ki) => (
                         ki.id === newActive ?
-                            <div className={`${style.dot} ${style.active}`} key={ki.id} onClick={(e) => { dispatch(handlePic(e, ki.id)) }}><a href={(e) => { e.preventDefault() }}><i></i></a></div>
-                            : <div className={style.dot} key={ki.id} onClick={(e) => { dispatch(handlePic(e, ki.id)) }}><a href={(e) => { e.preventDefault() }}><i></i></a></div>
+                            <div className={`${style.dot} ${style.active}`} key={ki.id} onClick={(e) => { dispatch(handlePic(e, ki.id)) }}><a href='/#' onClick={(e) => { e.preventDefault() }}><i></i></a></div>
+                            : <div className={style.dot} key={ki.id} onClick={(e) => { dispatch(handlePic(e, ki.id)) }}><a href='/#' onClick={(e) => { e.preventDefault() }}><i></i></a></div>
                     ))}
                 </div>
                 <div className={style.slideshowNav}>

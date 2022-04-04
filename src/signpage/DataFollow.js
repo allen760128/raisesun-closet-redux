@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './signinData.module.css';
 import { useSelector } from 'react-redux';
 import { BsHeart } from "react-icons/bs";

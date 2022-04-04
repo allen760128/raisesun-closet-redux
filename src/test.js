@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import style from './test.module.css';
 import { useFormik } from 'formik';
-import { DataSaverOnTwoTone } from '@mui/icons-material';
 
 const Test = () => {
     const [list, setList] = useState('');

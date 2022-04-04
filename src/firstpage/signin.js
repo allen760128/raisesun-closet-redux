@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './signin.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -8,7 +8,7 @@ import {
 } from '../store/signAction';
 import {
     handle_login, handle_logout, fetch_data, handle_logid,
-    handle_logpass, handle_idError, handle_passError
+    handle_logpass, handle_idError, handle_passError, handle_allclear,
 } from '../store/validationActions';
 // import Logid from '../signbutton/logid';
 // import Logpass from '../signbutton/logpass';
@@ -19,6 +19,8 @@ const SignIn = (props) => {
     const changeLogpass = useSelector(state => state.validation.changeLogpass);
     const switchIdError = useSelector(state => state.validation.switchIdError);
     const switchPassError = useSelector(state => state.validation.switchPassError);
+
+    const [check, setCheck] = useState(false);
 
     const loading = useSelector(state => state.validation.loading);
     // const loggedIn = useSelector(state => state.validation.loggedIn);
@@ -56,6 +58,7 @@ const SignIn = (props) => {
 
                 localStorage.setItem('token', '760128');
                 dispatch(handle_login());
+                dispatch(handle_allclear());//這邊才是離開後把所有資料清除
                 navigate('/signindata');
             } else {
                 dispatch(handle_idError(String(userName)));
@@ -103,7 +106,7 @@ const SignIn = (props) => {
                             </div>
                             <span className={style.passerror}>{loading ? '' : switchPassError}</span>
                             <div className={style.remem}>
-                                <input type="checkbox" onChange={() => { }} />
+                                <input type="checkbox" checked={check} onChange={() => { setCheck(!check) }} />
                                 <label htmlFor="">記住我</label>
                             </div>
                             <div className={style.loginWrap}>

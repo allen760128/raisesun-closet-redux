@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import style from './button.module.css';
 
 const Button = (props) => {
-    const [change, setChange] = useState();
-    const [focus, setFocus] = useState(false);
+    // const [change, setChange] = useState();
+    // const [focus, setFocus] = useState(false);
     const [click, setClick] = useState(false);
-    const name = props.name;
+    const [bt, setBt] = useState(false);
+    // const name = props.name;
     // const handle_changePage = (e) => {
     //     setChange(e.target.value);
     // };
@@ -27,8 +28,8 @@ const Button = (props) => {
             <input type='button'
                 name="" id=""
                 placeholder=''
-                value={names}
-                // onChange={(e) => { handle_changePage(e) }}
+                value={bt}
+                onChange={(e) => { setBt(e.target.value) }}
                 // onFocus={() => { handle_focus() }}
                 // onBlur={() => { handle_blur() }}
                 onMouseDown={() => { handle_click() }}

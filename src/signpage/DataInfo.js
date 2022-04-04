@@ -51,7 +51,7 @@ const DataInfo = (props) => {
                             <BsAward />
                             <span>升級至高級會員</span>
                             <h3>12個月內累積消費額達NT$2000即可升級</h3>
-                            <a href="#">查看所有會員等級規則</a>
+                            <a href="/#">查看所有會員等級規則</a>
                         </div>
                     </div>
                     <div className={style.recommend}>
@@ -63,7 +63,7 @@ const DataInfo = (props) => {
                         <div className={style.bottom_1}>
                             <h3>會員分享送購物金: 複製並分享連結給朋友，推薦對象和你將獲得購物金。<span>活動規則說明</span></h3>
 
-                            <a href="#">https://www.lab52.com.tw/?sl-mref=1m949</a>
+                            <a href="/#">https://www.lab52.com.tw/?sl-mref=1m949</a>
                         </div>
                     </div>
                 </div>

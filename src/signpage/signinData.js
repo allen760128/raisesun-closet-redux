@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import style from './signinData.module.css';
 import Nav from '../common/nav';
 import Footer from '../common/footer';
@@ -11,7 +11,7 @@ import DataOrder from './DataOrder';
 import DataFollow from './DataFollow';
 // import { IconContext } from "react-icons";
 import { useNavigate } from 'react-router-dom';
-import { fetch_api, handle_dataliClick, handle_logout, handle_login, fetchlogin, fetchTest } from '../store/validationActions';
+import { fetch_api, handle_dataliClick, handle_logout, handle_login, fetchTest } from '../store/validationActions';
 import { useDispatch, useSelector } from 'react-redux';
 import CircularProgress from '../common/CircularProgress';
 
@@ -24,7 +24,8 @@ const SigninData = (props) => {
     const navigate = useNavigate();
     const tk = localStorage.getItem('token');
     const testData = useSelector(state => state.validation.testData);
-
+    console.log(loggedIn)
+    console.log(tk)
     //text
     useEffect(() => {
         dispatch(fetchTest());

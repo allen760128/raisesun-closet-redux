@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import style from './normal2.module.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 // import { handle_birth } from '../store/validationActions';
 
 const Normal2 = (props) => {
-    const dispatch = useDispatch();
     const changeBirth = useSelector(state => state.validation.changeBirth);
     const switchSignBirthError = useSelector(state => state.validation.switchSignBirthError);
     const name = props.name;
