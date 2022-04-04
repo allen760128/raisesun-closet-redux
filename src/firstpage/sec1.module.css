@@ -1,34 +1,40 @@
 .slideshow {
-    width:100%;
+    width: 100%;
 }
-.slideshow .slideshowSlides{
+
+.slideshow .slideshowSlides {
     position: relative;
 }
-.slideshow .slideshowSlides .slideshowSlidesWrap{
+
+.slideshow .slideshowSlides .slideshowSlidesWrap {
     /* width: 500%; */
     height: auto;
     overflow: hidden;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     position: relative;
     left: 0;
     transition: 0.5s all ease-in-out;
 }
-.slideshow .slideshowSlides .slide{
+
+.slideshow .slideshowSlides .slide {
     width: 100%;
 }
-.slideshow .slideshowSlides img{
+
+.slideshow .slideshowSlides img {
     width: 100%;
 }
-.slideshow .slideshowSlides .slideshowNav{
+
+.slideshow .slideshowSlides .slideshowNav {
     width: 100%;
     height: 120px;
-    position:absolute;
+    position: absolute;
     top: 50%;
     text-indent: -9999px;
 }
+
 .slideshow .slideshowSlides .slideshowNav .prev,
-.slideshow .slideshowSlides .slideshowNav .next{
+.slideshow .slideshowSlides .slideshowNav .next {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
@@ -37,19 +43,24 @@
     overflow: hidden;
     transition: 0.3s all ease-in-out;
 }
-.slideshow .slideshowSlides .slideshowNav .prev{
+
+.slideshow .slideshowSlides .slideshowNav .prev {
     left: 3%;
-    
+
 }
-.slideshow .slideshowSlides .slideshowNav .next{
+
+.slideshow .slideshowSlides .slideshowNav .next {
     background-position: right;
     right: 3%;
-    
+
 }
-.slideshow .slideshowSlides .slideshowNav .prev:hover, .slideshow .slideshowSlides .slideshowNav .next:hover{
+
+.slideshow .slideshowSlides .slideshowNav .prev:hover,
+.slideshow .slideshowSlides .slideshowNav .next:hover {
     opacity: 0.5;
 }
-.slideshow .slideshowSlides .slideshowIndicator{
+
+.slideshow .slideshowSlides .slideshowIndicator {
     position: absolute;
     width: 100%;
     height: 50px;
@@ -57,7 +68,8 @@
     display: flex;
     justify-content: center;
 }
-.slideshow .slideshowSlides .slideshowIndicator .dot{
+
+.slideshow .slideshowSlides .slideshowIndicator .dot {
     width: 15px;
     height: 15px;
     background-color: #fff;
@@ -67,45 +79,52 @@
     cursor: pointer;
     transition: 0.3s all ease-in-out;
 }
-.slideshow .slideshowSlides .slideshowIndicator .active{
+
+.slideshow .slideshowSlides .slideshowIndicator .active {
     background-color: rgb(63, 63, 63);
     transition: 0.3s all ease-in-out;
 }
 
-@media (min-width:970px) and (max-width:1169px){
-.slideshow .slideshowSlides .slideshowNav .prev,
-.slideshow .slideshowSlides .slideshowNav .next{
-    width: 80px;
-    height: 80px;
-}
+@media (min-width:970px) and (max-width:1169px) {
+
+    .slideshow .slideshowSlides .slideshowNav .prev,
+    .slideshow .slideshowSlides .slideshowNav .next {
+        width: 80px;
+        height: 80px;
+    }
 }
 
-@media (min-width:769px) and (max-width:969px){
-.slideshow .slideshowSlides .slideshowNav .prev,
-.slideshow .slideshowSlides .slideshowNav .next{
-    width: 60px;
-    height: 60px;
-}    
-.slideshow .slideshowSlides .slideshowIndicator .dot{
-    width: 10px;
-    height: 10px;
-    margin: 0 10px;
-}
+@media (min-width:769px) and (max-width:969px) {
+
+    .slideshow .slideshowSlides .slideshowNav .prev,
+    .slideshow .slideshowSlides .slideshowNav .next {
+        width: 60px;
+        height: 60px;
+    }
+
+    .slideshow .slideshowSlides .slideshowIndicator .dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 10px;
+    }
 }
 
-@media  (max-width:768px){
-.slideshow .slideshowSlides .slideshowNav .prev,
-.slideshow .slideshowSlides .slideshowNav .next{
-    width: 50px;
-    height: 50px;
-}
-.slideshow .slideshowSlides .slideshowIndicator .dot{
-    width: 10px;
-    height: 10px;
-    margin: 20px 10px 0 10px;
-}
-.slideshow .slideshowSlides .slideshowNav{
-    height: 120px;
-    top: 40%;
-}
+@media (max-width:768px) {
+
+    .slideshow .slideshowSlides .slideshowNav .prev,
+    .slideshow .slideshowSlides .slideshowNav .next {
+        width: 50px;
+        height: 50px;
+    }
+
+    .slideshow .slideshowSlides .slideshowIndicator .dot {
+        width: 10px;
+        height: 10px;
+        margin: 20px 10px 0 10px;
+    }
+
+    .slideshow .slideshowSlides .slideshowNav {
+        height: 120px;
+        top: 40%;
+    }
 }

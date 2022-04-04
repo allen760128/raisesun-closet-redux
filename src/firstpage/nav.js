@@ -20,7 +20,6 @@ const Nav = (props) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-
     //因offsetTop必須在函式內，故先定義一個函式包住window物件再dispatch進去
     const srcollAbout = () => {
         const scrollRef = props.all.about.current.offsetTop;
@@ -76,6 +75,7 @@ const Nav = (props) => {
     const handleClick = (e) => {
         e.preventDefault();
         setPantsClick(!pantsClick);
+        console.log('hit')
     }
     const pantsClass = pantsClick ? style.bbDisNone : '';
     const pantsAClass = pantsClick ? style.bbAa : '';
@@ -90,9 +90,13 @@ const Nav = (props) => {
 
 
     //登入狀態時，回到首頁要再按sign in會直接跳入signData
-    const signswitch =
+    const signswitch = (e) => {
+        e.preventDefault();
         local === '760128' ? navigate('/signindata')
-            : (e) => { dispatch(handleSingToggle(e)) }
+            : dispatch(handleSingToggle(e))
+    }
+    // local === '760128' ? navigate('/signindata')
+    //     : (e) => { dispatch(handleSingToggle(e)) }
 
 
     return (
@@ -104,8 +108,9 @@ const Nav = (props) => {
             </div>
             <div className={style.menuWrap} style={openopen}>
                 <ul className="menu" style={menuLeft}>
-                    <li className={style.aa} onClick={(e) => { dispatch(handleScrollabout(e, srcollAbout())) }}><a href="#">I. About</a></li>
-                    <li className={pantsClick ? ` ${style.bbHeight350}` : style.bb} onClick={navClick} ><a href="#">II. Products</a>
+                    <li className={style.aa} onClick={(e) => { dispatch(handleScrollabout(e, srcollAbout())) }}><a href="/#">I. About</a></li>
+
+                    <li className={pantsClick ? ` ${style.bbHeight350}` : style.bb} onClick={navClick} ><a href="/#">II. Products</a>
                         <ul className={pantsClick ? style.bbUl : ''}>
                             <li className={pantsClass} onClick={(e) => { dispatch(handleRwdToggle(e)) }}><Link to='/pants' className={pantsAClass}>Pants</Link></li>
                             <li className={pantsClass} onClick={(e) => { dispatch(handleRwdToggle(e)) }}><Link to='/pants' className={pantsAClass}>Vest</Link></li>
@@ -115,14 +120,14 @@ const Nav = (props) => {
                             <li className={pantsClass} onClick={(e) => { dispatch(handleRwdToggle(e)) }}><Link to='/pants' className={pantsAClass}>Jeans</Link></li>
                         </ul>
                     </li>
-                    <li className={style.cc} onClick={(e) => { dispatch(handleScrollserv(e, scrollServ())) }}><a href="#">III. Services</a></li>
-                    <li className={style.dd} onClick={(e) => { dispatch(handleScrollcont(e, scrollCont())) }}><a href="#">IV. Contact</a></li>
-                    <li className={style.sign} onClick={signswitch}><a href="#">V. Sign In</a></li>
+                    <li className={style.cc} onClick={(e) => { dispatch(handleScrollserv(e, scrollServ())) }}><a href="/#">III. Services</a></li>
+                    <li className={style.dd} onClick={(e) => { dispatch(handleScrollcont(e, scrollCont())) }}><a href="/#">IV. Contact</a></li>
+                    <li className={style.sign} onClick={(e) => { signswitch(e) }}><a href="/#">V. Sign In</a></li>
                 </ul>
                 {/* <SignIn styleLeft={signInLeft}/> */}
                 {/* <div className={style.md} ref={MDToggle} style={mdToggle}></div> */}
             </div>
-            <div className={style.navMd} style={navMd} onClick={(e) => { mdToggle(e) }}></div>
+            <div className={style.navMd} style={navMd} onClick={mdToggle}></div>
             <div className={style.logoWrap}>
                 <div className={style.logo_line}></div>
                 <div className={style.logo} style={{ backgroundImage: `url(img/logo1.jpg)` }}><Link to='/p2'></Link>

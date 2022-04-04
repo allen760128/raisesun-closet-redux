@@ -10,6 +10,7 @@ import Pants from './pants';
 import Pantspropage from './pants/pantsProPage';
 import Signpage from './signpage/signIn';
 import SigninData from './signpage/signinData';
+import Forloop from './forloop';
 
 const App = () => {
   // const cartValue = useSelector(state => state.product.cartValue);
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='/signin' element={<Signpage />}></Route>
           <Route path='/signindata' element={<SigninData />}></Route>
           <Route path='/test' element={<Test />}></Route>
+          <Route path='/forloop' element={<Forloop />}></Route>
         </Routes>
       </HashRouter>
     </Provider>

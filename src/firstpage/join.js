@@ -2,10 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import style from './join.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-    handleJoin, handleJoinCancel, handleNamejoin, handleIdjoin,
-    handlePassjoin, handleConjoin, handleDatejoin,
-    handlePhonejoin, handleMailjoin, handleJoinsubmit,
-    handleClear,
+    handleJoin, handleJoinCancel,
 } from '../store/signAction';
 import {
     handle_changeName, handle_allclear, handle_id, handle_pass,

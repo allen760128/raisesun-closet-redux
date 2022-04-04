@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './pants.module.css';
 import CataPro from '../common/cataPro';
 import CataSort from '../common/cataSort';
@@ -7,12 +7,11 @@ import { Link } from 'react-router-dom';
 import { fetchPantsData, handleChangePage, handleCart, handlePassData } from '../store/proActions';
 import { useDispatch, useSelector } from 'react-redux';
 import CircularIndeterminate from '../common/CircularProgress';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+// import { useParams } from 'react-router-dom';
 
 const PantsContent = () => {
     const dispatch = useDispatch();
-    const pantsData = useSelector(state => state.product.pantsData);
+    // const pantsData = useSelector(state => state.product.pantsData);
     const totalData = useSelector(state => state.product.originData);
     const loading = useSelector(state => state.product.loading);
     const error = useSelector(state => state.product.error);
@@ -20,7 +19,7 @@ const PantsContent = () => {
     const numChange = useSelector(state => state.product.numChange);
     // const cartValue = useSelector(state => state.product.cartValue);
     // const cartId = useSelector(state => state.product.cartId);
-    const { id } = useParams();
+    // const { id } = useParams();
 
     const [resize, setResize] = useState(true);
 
@@ -38,9 +37,6 @@ const PantsContent = () => {
     // }
 
 
-    useEffect(() => {
-        // fetch()
-    }, []);
 
     useEffect(() => {
         window.scrollTo({ top: 0 });

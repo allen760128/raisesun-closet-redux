@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import style from '../common/signbutton/normal2.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { handle_id } from '../store/validationActions';
+import { useSelector } from 'react-redux';
 
 const Normal2 = (props) => {
-    const dispatch = useDispatch();
-    const changeId = useSelector(state => state.validation.changeId);
+    // const dispatch = useDispatch();
+    // const changeId = useSelector(state => state.validation.changeId);
     const switchSignIdError = useSelector(state => state.validation.switchSignIdError);
     const [focus, setFocus] = useState(false);
     const [sex, setSex] = useState('男');

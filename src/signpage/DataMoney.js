@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './signinData.module.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const DataMoney = (props) => {
     const datali = useSelector(state => state.validation.detailId);

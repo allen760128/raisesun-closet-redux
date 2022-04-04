@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import style from './signin.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import CircularProgress from '../common/CircularProgress';
 import {
-    handleForget, handleJoin, handleIdchange, handleSubmit, handlePasschange,
-    handleIderror, handlePasserror, handleClear,
+    handleForget, handleJoin, handleClear,
 } from '../store/signAction';
 import {
     handle_login, handle_logout, fetch_data, handle_logid,
-    handle_logpass, handle_allclear, handle_idError, handle_passError
+    handle_logpass, handle_idError, handle_passError
 } from '../store/validationActions';
-import Logid from '../signbutton/logid';
-import Logpass from '../signbutton/logpass';
+// import Logid from '../signbutton/logid';
+// import Logpass from '../signbutton/logpass';
 
 const SignIn = (props) => {
     const signOpen = useSelector(state => state.sign.signOpen);
@@ -22,8 +21,8 @@ const SignIn = (props) => {
     const switchPassError = useSelector(state => state.validation.switchPassError);
 
     const loading = useSelector(state => state.validation.loading);
-    const loggedIn = useSelector(state => state.validation.loggedIn);
-    const signIn = useSelector(state => state.validation.signIn);
+    // const loggedIn = useSelector(state => state.validation.loggedIn);
+    // const signIn = useSelector(state => state.validation.signIn);
     const signinData = useSelector(state => state.validation.signinData);
     const toggleLogin = { right: signOpen ? '0px' : '-100%' };
     const dispatch = useDispatch();
@@ -85,7 +84,7 @@ const SignIn = (props) => {
             <div className={style.inner}>
                 <div className={style.top}>
                     <div className={style.topLeft}><span>登入</span></div>
-                    <div className={style.topRight}><span>或<a href="#" onClick={(e) => { handlejoin(e) }}>加入會員</a></span></div>
+                    <div className={style.topRight}><span>或<a href="/#" onClick={(e) => { handlejoin(e) }}>加入會員</a></span></div>
                 </div>
                 <div className={style.middle}>
                     <div className={style.middleInner}>
@@ -110,7 +109,7 @@ const SignIn = (props) => {
                             <div className={style.loginWrap}>
                                 <div className={style.loginLeft}>
                                     <span>
-                                        <a href="#" onClick={(e) => { dispatch(handleForget(e)) }}>忘記密碼</a>
+                                        <a href="/#" onClick={(e) => { dispatch(handleForget(e)) }}>忘記密碼</a>
                                     </span>
                                 </div>
                                 <div className={style.loginRight}>

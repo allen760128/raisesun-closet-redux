@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchusers } from './store/asyncActions';
 import CircularIndeterminate from './common/CircularProgress';
-import { handle_login, handle_logout, } from './store/validationActions';
+import { handle_logout, } from './store/validationActions';
 import { useNavigate } from 'react-router-dom';
 
 const P2 = () => {
@@ -19,7 +19,7 @@ const P2 = () => {
 
 
     //以下皆為判斷網頁是否有token或是是否確實login，來判斷可否進入下一頁
-    const token = localStorage.getItem('token');
+    // const token = localStorage.getItem('token');
     // console.log(token);
     const handleLogout = () => {
         localStorage.removeItem('token');

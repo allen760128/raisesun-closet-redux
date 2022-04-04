@@ -6,7 +6,7 @@ import CircularIndeterminate from '../common/CircularProgress';
 import Nav from '../common/nav';
 import Footer from '../common/footer';
 import { useParams } from 'react-router-dom';
-import pantsporData from '../common/propicData.json';
+// import pantsporData from '../common/propicData.json';
 import Select6 from '../common/select6';
 import Select3 from '../common/select3';
 import Select4 from '../common/select4';
@@ -18,8 +18,8 @@ const Pantspropage = () => {
     const loading = useSelector(state => state.product.loading);
     const error = useSelector(state => state.product.error);
     const spic = useSelector(state => state.product.spic);
-    const cartImg = useSelector(state => state.product.cartImg);
-    const pantsData = useSelector(state => state.product.pantsData);
+    // const cartImg = useSelector(state => state.product.cartImg);
+    // const pantsData = useSelector(state => state.product.pantsData);
     const pageData = useSelector(state => state.product.pageData);
     const rate = useSelector(state => state.product.rate);
     const [select, setSelect] = useState(1);
@@ -71,7 +71,6 @@ const Pantspropage = () => {
     //     window.scrollTo({ top: x, });
     //     { console.log(x) }
     // }, []);
-    console.log();
     const middleMargin = { marginLeft: -(marginToggle - 1) * 100 + '%' };
     return (
         <div className={style.pantsWrapper}>
@@ -104,9 +103,9 @@ const Pantspropage = () => {
                                     <div className={style.shareTo}>
                                         <span>分享到:</span>
                                         <ul>
-                                            <li><a href="https://line.me/zh-hant/" target='_blank'><img src="./img/social_line.png" alt="" /></a></li>
-                                            <li><a href="https://www.facebook.com/" target='_blank'><img src="./img/social_facebook.png" alt="" /></a></li>
-                                            <li><a href="https://www.instagram.com/" target='_blank'><img src="./img/social_instagram.png" alt="" /></a></li>
+                                            <li><a href="https://line.me/zh-hant/" rel="noreferrer" target='_blank'><img src="./img/social_line.png" alt="" /></a></li>
+                                            <li><a href="https://www.facebook.com/" rel="noreferrer" target='_blank'><img src="./img/social_facebook.png" alt="" /></a></li>
+                                            <li><a href="https://www.instagram.com/" rel="noreferrer" target='_blank'><img src="./img/social_instagram.png" alt="" /></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -118,7 +117,7 @@ const Pantspropage = () => {
                                             <span>NT${pageData.price}</span>
                                             <div className={style.rate}>
                                                 <ul>{
-                                                    ratingArray.map((ratingArray, inx) => (
+                                                    ratingArray.map((inx) => (
                                                         <li key={inx}>
                                                             <img src="./img/start.png" alt="" />
                                                         </li>
@@ -154,9 +153,9 @@ const Pantspropage = () => {
                                 <div className={style.middleTop}>
                                     <ul ref={middleRef}>{middleSelect.map(c =>
                                         c.id === select ?
-                                            <li key={c.id} onClick={() => { handleSelect(c.id) }}><a href='#' className={style.active} onClick={(e) => { e.preventDefault() }}>{c.title}</a></li>
+                                            <li key={c.id} onClick={() => { handleSelect(c.id) }}><a href='/#' className={style.active} onClick={(e) => { e.preventDefault() }}>{c.title}</a></li>
                                             :
-                                            <li key={c.id} onClick={() => { handleSelect(c.id) }}><a href='#' onClick={(e) => { e.preventDefault() }}>{c.title}</a></li>
+                                            <li key={c.id} onClick={() => { handleSelect(c.id) }}><a href='/#' onClick={(e) => { e.preventDefault() }}>{c.title}</a></li>
                                     )}
                                     </ul>
                                 </div>
@@ -194,7 +193,7 @@ const Pantspropage = () => {
                                                             <h3>1個評價</h3>
                                                             {/* <div className={style.inner} ></div> */}
                                                             <ul>{
-                                                                ratingArray.map((ratingArray, inx) => (
+                                                                ratingArray.map((inx) => (
                                                                     <li key={inx}>
                                                                         <img src="./img/start.png" alt="" />
                                                                     </li>
@@ -241,4 +240,3 @@ const Pantspropage = () => {
 
 export default Pantspropage;
 
-{/* <span style="margin:0 0 0 10px;display:inline-block;width: 60px;font-size:14px; border-radius: 5px; height: 20px; line-height: 20px; color: #fff; background-color:#00E3E3">New</span> */ }

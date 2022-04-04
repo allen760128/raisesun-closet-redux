@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './signinData.module.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { BsFillMegaphoneFill } from "react-icons/bs";
 
 
@@ -26,7 +26,7 @@ const DataPoint = (props) => {
                 </div>
                 <div className={style.topRight}>
                     <div className={style.inner}>
-                        <a href="#">點數規則說明</a>
+                        <a href="/#">點數規則說明</a>
                     </div>
                 </div>
             </div>

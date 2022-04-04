@@ -3,22 +3,17 @@ import { Link } from 'react-router-dom';
 import style from './nav.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { handleRwdToggle, handleMd, handleLocalfalse, } from '../store/signAction';
-import { useNavigate } from 'react-router-dom';
-import { ConstructionOutlined } from '@mui/icons-material';
+// import { useNavigate } from 'react-router-dom';
 
 const Nav = (props) => {
-    const signOpen = useSelector(state => state.sign.signOpen);
+    // const signOpen = useSelector(state => state.sign.signOpen);
     const rwdToggle = useSelector(state => state.sign.rwdToggle);
     const [pantsClick, setPantsClick] = useState(false);
     const [navaaToggle, setNavaatoggle] = useState(false);
-    let navigate = useNavigate();
+    // let navigate = useNavigate();
     // const aboutto=useSelector(state=>state.sign.about);
     // const proto=useSelector(state=>state.sign.pro);
     const dispatch = useDispatch();
-
-    const handleDefault = (e) => {
-        e.preventDefault();
-    }
 
     const top = props.refTop;
     const navMd = { right: rwdToggle ? '0' : '-100%' };
@@ -33,7 +28,6 @@ const Nav = (props) => {
     }
     const pantsClass = pantsClick ? style.bbDisNone : '';
     const pantsAClass = pantsClick ? style.bbAa : '';
-
 
 
 
@@ -57,6 +51,11 @@ const Nav = (props) => {
     //         navigate('/signin');
     //     }
     // }
+
+    const handleDefault = (e) => {
+        e.preventDefault();
+    }
+
     return (
         <div id={style.nav} ref={top}>
             <div className={style.rwdMenu} onClick={(e) => { dispatch(handleRwdToggle(e)) }}>
@@ -66,14 +65,14 @@ const Nav = (props) => {
             </div>
             <div className={style.menuWrap} style={openopen}>
                 <div className={style.logoWrap}>
-                    <div className={style.logo} style={{ backgroundImage: `url(img/logo1.jpg)` }}><a href="#" onClick={handleDefault}></a>
+                    <div className={style.logo} style={{ backgroundImage: `url(img/logo1.jpg)` }}><a href="/#" onClick={handleDefault}><i></i></a>
                         {/* <h1>raisesun</h1> */}
                     </div>
                 </div>
 
                 <ul className={style.menu}>
                     <li className={style.aa} onClick={(e) => { dispatch(handleRwdToggle(e)) }}><Link to='/#'>I. Raise Sun</Link></li>
-                    <li className={pantsClick ? ` ${style.bbHeight350}` : style.bb} onClick={navClick} ><a href="#">II. Products</a>
+                    <li className={pantsClick ? ` ${style.bbHeight350}` : style.bb} onClick={navClick} ><a href="/#">II. Products</a>
                         <ul className={pantsClick ? style.bbUl : ''}>
                             <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Pants</Link></li>
                             <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Vest</Link></li>
@@ -83,8 +82,8 @@ const Nav = (props) => {
                             <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Jeans</Link></li>
                         </ul>
                     </li>
-                    <li className={style.cc} onClick={handleDefault}><a href="#">III. Services</a></li>
-                    <li className={style.dd} onClick={handleDefault}><a href="#">IV. Contact</a></li>
+                    <li className={style.cc} onClick={handleDefault}><a href="/#">III. Services</a></li>
+                    <li className={style.dd} onClick={handleDefault}><a href="/#">IV. Contact</a></li>
                     <li className={style.sign}><Link to='/signin'>V. Sign In</Link></li>
                 </ul>
 

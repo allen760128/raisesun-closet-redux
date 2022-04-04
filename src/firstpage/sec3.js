@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './sec3.module.css';
 
-const Sec3=()=>{
-    return(
+const Sec3 = () => {
+    return (
         <div id={style.banner2}>
-            <img src="img/sec3_banner.jpg" />
+            <img src="img/sec3_banner.jpg" alt='' />
         </div>
     );
 }

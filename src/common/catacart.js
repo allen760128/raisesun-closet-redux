@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import style from '../pants/pants.module.css';
-import { handleCloseCart, handleChangePic, handleCartNum } from '../store/proActions';
+import { handleCloseCart, handleChangePic } from '../store/proActions';
 import Select3 from './select3';
 import Select4 from './select4';
 
@@ -9,7 +9,7 @@ const Catacart = () => {
     const dispatch = useDispatch();
     const toscroll = useSelector(state => state.product.to);
     const cartImg = useSelector(state => state.product.cartImg);
-    const cartNum = useSelector(state => state.product.cartNum);
+    // const cartNum = useSelector(state => state.product.cartNum);
     const spic = useSelector(state => state.product.spic);
     const cartValue = useSelector(state => state.product.cartValue);
     const togglecart = useSelector(state => state.product.toggleCart);
@@ -18,16 +18,16 @@ const Catacart = () => {
 
 
     //使用方法不需要傳函數，使用邏輯操作在useEffect內做判斷即可
+    //此為在手機裝置下加入購物車視窗跳出後，加入購物車小視窗會回到top=0
     const tocartWrapp = useRef();
     const cc = tocartWrapp.current;
-
     useEffect(() => {
         if (toscroll) {
 
             cc.scrollTop = 0;
         }
         // toscroll?:null;
-    }, [toscroll]);
+    }, [toscroll, cc]);
 
 
     //滾動條失效

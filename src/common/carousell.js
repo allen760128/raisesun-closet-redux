@@ -33,7 +33,7 @@ const Carousell = (props) => {
             }
         }, 3000);
         return () => { clearInterval(loop); }
-    }, [switchCarousell]);
+    }, [switchCarousell, picLength]);
 
     const handleLeft = () => {
         if (switchCarousell >= 0) {

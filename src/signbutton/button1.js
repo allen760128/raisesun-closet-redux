@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import style from '../common/signbutton/button.module.css';
 
 const Button = (props) => {
-    const [change, setChange] = useState();
-    const [focus, setFocus] = useState(false);
     const [click, setClick] = useState(false);
-    const name = props.name;
     // const handle_changePage = (e) => {
     //     setChange(e.target.value);
     // };

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import style from './signinData.module.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { BsHeart } from "react-icons/bs";
 
 const DataFollow = (props) => {

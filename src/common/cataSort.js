@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import style from './cataSort.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { handlePchange, handleArrange } from '../store/proActions';
@@ -9,7 +9,7 @@ const CataSort = () => {
     const dispatch = useDispatch();
     const changePrice = useSelector(state => state.product.price);
     const changeArrange = useSelector(state => state.product.arrange);
-    const Data = useSelector(state => state.product.pantsData);
+    // const Data = useSelector(state => state.product.pantsData);
     const totalData = useSelector(state => state.product.originData);
     const priceLowArrange = JSON.stringify(totalData.map(c => c).sort((a, b) => { return a.price - b.price }));
     const priceHighArrange = JSON.stringify(totalData.map(c => c).sort((a, b) => { return b.price - a.price }));

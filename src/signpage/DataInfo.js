@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import style from './signinData.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { BsFillFilePersonFill, BsAward, BsFillFlagFill, BsFillPencilFill } from "react-icons/bs";

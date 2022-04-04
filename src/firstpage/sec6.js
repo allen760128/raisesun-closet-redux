@@ -16,10 +16,10 @@ const Sec6 = (props) => {
                 </div>
                 <div className={style.aboutUsContent} data-aos="fade-left">
                     <ul>
-                        <li><span><img src="img/num_1.png" /></span> 我們採用貨到付款的方式，呈上最優質的服務</li>
-                        <li><span><img src="img/num_2.png" /></span> 配合各項優惠，不定期實施免運費服務</li>
-                        <li><span><img src="img/num_3.png" /></span> 台灣地區分佈25間實體店面</li>
-                        <li><span><img src="img/num_4.png" /></span> 24小時到貨服務，中午前下單，隔天收貨</li>
+                        <li><span><img src="img/num_1.png" alt='' /></span> 我們採用貨到付款的方式，呈上最優質的服務</li>
+                        <li><span><img src="img/num_2.png" alt='' /></span> 配合各項優惠，不定期實施免運費服務</li>
+                        <li><span><img src="img/num_3.png" alt='' /></span> 台灣地區分佈25間實體店面</li>
+                        <li><span><img src="img/num_4.png" alt='' /></span> 24小時到貨服務，中午前下單，隔天收貨</li>
                     </ul>
                 </div>
 

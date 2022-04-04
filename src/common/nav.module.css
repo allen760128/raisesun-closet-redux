@@ -1,8 +1,10 @@
-#nav{max-width:1400px;
+#nav {
+    max-width: 1400px;
     padding-bottom: 20px;
     margin: 0 auto;
 }
-#nav .rwdMenu{
+
+#nav .rwdMenu {
     position: absolute;
     top: 0;
     right: 0;
@@ -11,19 +13,21 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     z-index: 999;
     opacity: 0;
 }
-#nav .rwdMenu>span{
+
+#nav .rwdMenu>span {
     display: block;
     width: 30px;
     height: 2px;
     background-color: rgb(112, 112, 112);
     margin: 5px 0;
     transition: 0.3s all ease-in-out;
-    transform:translateY(0px) rotate(0deg);
+    transform: translateY(0px) rotate(0deg);
 }
+
 #nav .menuWrap {
     height: 80px;
     width: 100%;
@@ -32,7 +36,8 @@
     justify-content: center;
     margin: 0 auto;
 }
-#nav .menuWrap ul{
+
+#nav .menuWrap ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -40,89 +45,107 @@
     transition: 0.3s all ease-in-out;
     /* position: absolute; */
 }
-#nav .menuWrap ul li{
-    width:20%;
+
+#nav .menuWrap ul li {
+    width: 20%;
     height: 50px;
-    margin-top:30px;
+    margin-top: 30px;
 }
-#nav .menuWrap ul li a{
-    display:block;
-    text-align:center;
-    height:50px;
+
+#nav .menuWrap ul li a {
+    display: block;
+    text-align: center;
+    height: 50px;
     width: 140px;
     margin: 0 auto;
-    line-height:40px;
-    color:#333;
-    font-size:20px;
-    font-weight:100;
+    line-height: 40px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 100;
     font-family: 'Poiret One', cursive;
-    transition:0.3s all ease-in-out;
-    border-bottom:1px solid #fefbf4;
+    transition: 0.3s all ease-in-out;
+    border-bottom: 1px solid #fefbf4;
 }
-#nav .menuWrap ul a:hover{
+
+#nav .menuWrap ul a:hover {
     width: 160px;
-    transition:0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
     color: rgb(190, 190, 190);
 }
-#nav .menuWrap ul .aa a:hover{
-    border-bottom:1px solid #0CF;
+
+#nav .menuWrap ul .aa a:hover {
+    border-bottom: 1px solid #0CF;
 }
-#nav .menuWrap ul .bb a:hover{
-    border-bottom:1px solid #903;
+
+#nav .menuWrap ul .bb a:hover {
+    border-bottom: 1px solid #903;
 }
-#nav .menuWrap ul .cc a:hover{
-    border-bottom:1px solid #F90;
+
+#nav .menuWrap ul .cc a:hover {
+    border-bottom: 1px solid #F90;
 }
-#nav .menuWrap ul .dd a:hover{
-    border-bottom:1px solid #6FC;
+
+#nav .menuWrap ul .dd a:hover {
+    border-bottom: 1px solid #6FC;
 }
-#nav .menuWrap ul .sign a:hover{
-    border-bottom:1px solid rgb(44, 44, 44);
+
+#nav .menuWrap ul .sign a:hover {
+    border-bottom: 1px solid rgb(44, 44, 44);
 }
-#nav .navMd{
+
+#nav .navMd {
     position: fixed;
     right: -100%;
     width: 100%;
     z-index: 987;
     height: 100vh;
 }
-#nav .menuWrap ul  .bb{
+
+#nav .menuWrap ul .bb {
     position: relative;
 }
-#nav .menuWrap ul  .bb ul{
+
+#nav .menuWrap ul .bb ul {
     position: absolute;
     /* display: flex; */
     flex-direction: column;
-    background-color:rgb( 255,255,255,0.4);
+    background-color: rgb(255, 255, 255, 0.4);
     width: 100%;
     z-index: 500;
 }
-#nav .menuWrap ul  .bb ul li{
+
+#nav .menuWrap ul .bb ul li {
     margin: 5px 0;
     text-align: center;
     width: 100%;
     cursor: pointer;
     display: none;
 }
-#nav .menuWrap ul  .bb:hover ul li{
+
+#nav .menuWrap ul .bb:hover ul li {
     display: flex;
 }
-#nav .menuWrap ul  .bbUl {
+
+#nav .menuWrap ul .bbUl {
     display: none;
 }
-  /*-----------------logo-----------------------*/
-.logoWrap{
+
+/*-----------------logo-----------------------*/
+.logoWrap {
     width: 10%;
     height: 100px;
     display: flex;
     justify-content: center;
-}	
-.logo{
-    background-repeat:no-repeat;
+}
+
+.logo {
+    background-repeat: no-repeat;
     background-position: center;
     background-size: 100px auto;
     width: 100px;
-    }
+}
+
+
 /* .logo a{
     display:block;
     width:auto;
@@ -141,149 +164,176 @@
     background-color: rgb(194, 166, 166);
 } */
 
-@media (min-width:970px) and (max-width:1169px){
-    #nav{
-        width:100%;
+@media (min-width:970px) and (max-width:1169px) {
+    #nav {
+        width: 100%;
     }
-    #nav .menuWrap ul li{
-        width:20%;
+
+    #nav .menuWrap ul li {
+        width: 20%;
     }
-    #nav .menuWrap ul li a{
+
+    #nav .menuWrap ul li a {
         width: 130px;
     }
-    #nav .menuWrap ul a:hover{
+
+    #nav .menuWrap ul a:hover {
         width: 140px;
     }
-    #nav .menuWrap ul  .bb{
+
+    #nav .menuWrap ul .bb {
         position: relative;
     }
-    #nav .menuWrap ul  .bb ul{
+
+    #nav .menuWrap ul .bb ul {
         position: absolute;
         /* display: flex; */
         flex-direction: column;
-        background-color:rgb( 255,255,255,0.4);
+        background-color: rgb(255, 255, 255, 0.4);
         width: 100%;
         z-index: 500;
     }
-    #nav .menuWrap ul  .bb ul li{
+
+    #nav .menuWrap ul .bb ul li {
         margin: 5px 0;
         text-align: center;
         width: 100%;
         cursor: pointer;
         display: none;
     }
-    #nav .menuWrap ul  .bb:hover ul li{
+
+    #nav .menuWrap ul .bb:hover ul li {
         display: flex;
     }
-    #nav .menuWrap ul  .bbUl {
+
+    #nav .menuWrap ul .bbUl {
         display: none;
     }
-      /*-----------------logo-----------------------*/
-    .logoWrap{
+
+    /*-----------------logo-----------------------*/
+    .logoWrap {
         padding-bottom: 0px;
-    }	
-}
-
-@media (min-width:769px) and (max-width:969px){
-
-
-#nav{
-    max-width:1400px;
-    padding-bottom: 20px;
-    margin: 0 auto;
-    position: relative;
-}
-#nav .rwdMenu{
-    opacity: 1;
-    position: fixed;
-    cursor: pointer;
-}
-#nav .menuWrap {
-    position: fixed;
-    right: -100%;
-    top: 0;
-    background-color: #fefbf4;
-    height: 100vh;
-    width: 450px;
-    z-index: 988;
-    transition: 0.3s all ease-in-out;
-}
-#nav .menuWrap .menu {
-    position:unset;
-    width: 100%;
-    margin-top: 0px;
-    height: 100vh;
-    justify-content:start;
-    flex-direction: column;
-    align-items: center;
-}
-#nav .menuWrap .menu  li{
-    width:60%;
-    height: 40px;
-    margin: 15px 0;
-}
-#nav .menuWrap ul li a{
-    width:60%;
-    height: 40px;
-    text-align: center;
-}
-#nav .navMd{
-    position: fixed;
-    width: 100%;
-    z-index: 887;
-    height: 100vh;
-    transition: 0.3s all ease-in-out;
-}
-#nav .menuWrap ul  .bb{
-    position:unset;
-}
-#nav .menuWrap ul  .bb:hover ul li{
-    display: none;
-}
-#nav .menuWrap ul  .bbHeight350 {
-    height: auto;
-    position:unset;
-}
-#nav .menuWrap ul  .bbUl {
-    display: flex;
-    position: unset;
-    flex-direction: column;
-    background-color:unset;
-    margin: 10px 0 0 0;
-    transition: none;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-}
-#nav .menuWrap ul  .bbAa{
-    display:block;
-    height:50px;
-    width: 100%;
-    margin: 0 auto;
-    font-size:20px;
-    border-bottom:none;
-}
-#nav .menuWrap ul  .bbDisNone {
-    height: 50px;
-    margin: 0;
-    text-align: center;
-    cursor: pointer;
-}
-#nav .menuWrap ul .bb:hover ul li a:hover{
-    border-bottom:unset;
-}
-  /*-----------------logo-----------------------*/
-.logoWrap{
-    padding-top: 10px;
-    width: 150px;
-    height: 100px;
-}	
-.logo{
-    width:150px;
-    height:auto;
-    background-size: 150px auto;
     }
-/* .logo a{
+}
+
+@media (min-width:769px) and (max-width:969px) {
+
+
+    #nav {
+        max-width: 1400px;
+        padding-bottom: 20px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    #nav .rwdMenu {
+        opacity: 1;
+        position: fixed;
+        cursor: pointer;
+    }
+
+    #nav .menuWrap {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        background-color: #fefbf4;
+        height: 100vh;
+        width: 450px;
+        z-index: 988;
+        transition: 0.3s all ease-in-out;
+    }
+
+    #nav .menuWrap .menu {
+        position: unset;
+        width: 100%;
+        margin-top: 0px;
+        height: 100vh;
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav .menuWrap .menu li {
+        width: 60%;
+        height: 40px;
+        margin: 15px 0;
+    }
+
+    #nav .menuWrap ul li a {
+        width: 60%;
+        height: 40px;
+        text-align: center;
+    }
+
+    #nav .navMd {
+        position: fixed;
+        width: 100%;
+        z-index: 887;
+        height: 100vh;
+        transition: 0.3s all ease-in-out;
+    }
+
+    #nav .menuWrap ul .bb {
+        position: unset;
+    }
+
+    #nav .menuWrap ul .bb:hover ul li {
+        display: none;
+    }
+
+    #nav .menuWrap ul .bbHeight350 {
+        height: auto;
+        position: unset;
+    }
+
+    #nav .menuWrap ul .bbUl {
+        display: flex;
+        position: unset;
+        flex-direction: column;
+        background-color: unset;
+        margin: 10px 0 0 0;
+        transition: none;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #nav .menuWrap ul .bbAa {
+        display: block;
+        height: 50px;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        border-bottom: none;
+    }
+
+    #nav .menuWrap ul .bbDisNone {
+        height: 50px;
+        margin: 0;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #nav .menuWrap ul .bb:hover ul li a:hover {
+        border-bottom: unset;
+    }
+
+    /*-----------------logo-----------------------*/
+    .logoWrap {
+        padding-top: 10px;
+        width: 150px;
+        height: 100px;
+    }
+
+    .logo {
+        width: 150px;
+        height: auto;
+        background-size: 150px auto;
+    }
+
+
+
+    /* .logo a{
     width:150px;
     height:100px;
 }
@@ -293,111 +343,127 @@
 } */
 }
 
-@media  (max-width:768px){
-#nav{
-    max-width:100%;
-    padding-bottom: 0px;
-    margin: 0 auto;
-    position: relative;
-}
-#nav .rwdMenu{
-    opacity: 1;
-    position: fixed;
-    cursor: pointer;
-}
-#nav .menuWrap {
-    position: fixed;
-    right: -100%;
-    top: 0;
-    background-color: #fefbf4;
-    height: 100vh;
-    width: 250px;
-    z-index: 988;
-    transition: 0.3s all ease-in-out;
-}
-#nav .menuWrap .menu{
-    position:unset;
-    width: 100%;
-    transition: 0.3s all ease-in-out;
-    margin-top: 0px;
-    height: 100vh;
-    justify-content:start;
-    flex-direction: column;
-    align-items: center;
-}
-#nav .menuWrap ul li{
-    font-size: 18px;
-    width:60%;
-    height: 40px;
-    margin: 5px 0;
-}
-#nav .menuWrap ul li a{
-    height: 40px;
-    text-align: center;
-}
-#nav .menuWrap ul a:hover{
-    width: 140px;
-}
-#nav .navMd{
-    position: fixed;
-    width: 100%;
-    z-index: 887;
-    height: 100vh;
-    transition: 0.3s all ease-in-out;
-}
-#nav .menuWrap ul  .bb:hover ul li{
-    display: none;
-}
-#nav .menuWrap ul  .bbHeight350 {
-    height: auto;
-    position:unset;
-}
-#nav .menuWrap ul  .bbUl {
-    display: flex;
-    position: unset;
-    flex-direction: column;
-    background-color:unset;
-    margin: 10px 0 0 0;
-    transition: none;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-}
-#nav .menuWrap ul  .bbAa{
-    display:block;
-    height:40px;
-    margin: 0 auto;
-    border-bottom:none;
-    width: 100%;
-    font-size:14px;
-}
-#nav .menuWrap ul  .bbDisNone {
-    height: 40px;
-    margin: 0;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-}
-#nav .menuWrap ul .bb:hover ul li a:hover{
-    border-bottom:unset;
-}
-    /*-----------------logo-----------------------*/
-.logoWrap{
-    justify-content:center;
-    width: 120px;
-}	
-.logo{
-    width:120px;
-    height:auto;
-    background-size: 120px auto;
-    margin-left:0px ;
+@media (max-width:768px) {
+    #nav {
+        max-width: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+        position: relative;
     }
-/* .logo a{
+
+    #nav .rwdMenu {
+        opacity: 1;
+        position: fixed;
+        cursor: pointer;
+    }
+
+    #nav .menuWrap {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        background-color: #fefbf4;
+        height: 100vh;
+        width: 250px;
+        z-index: 988;
+        transition: 0.3s all ease-in-out;
+    }
+
+    #nav .menuWrap .menu {
+        position: unset;
+        width: 100%;
+        transition: 0.3s all ease-in-out;
+        margin-top: 0px;
+        height: 100vh;
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav .menuWrap ul li {
+        font-size: 18px;
+        width: 60%;
+        height: 40px;
+        margin: 5px 0;
+    }
+
+    #nav .menuWrap ul li a {
+        height: 40px;
+        text-align: center;
+    }
+
+    #nav .menuWrap ul a:hover {
+        width: 140px;
+    }
+
+    #nav .navMd {
+        position: fixed;
+        width: 100%;
+        z-index: 887;
+        height: 100vh;
+        transition: 0.3s all ease-in-out;
+    }
+
+    #nav .menuWrap ul .bb:hover ul li {
+        display: none;
+    }
+
+    #nav .menuWrap ul .bbHeight350 {
+        height: auto;
+        position: unset;
+    }
+
+    #nav .menuWrap ul .bbUl {
+        display: flex;
+        position: unset;
+        flex-direction: column;
+        background-color: unset;
+        margin: 10px 0 0 0;
+        transition: none;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #nav .menuWrap ul .bbAa {
+        display: block;
+        height: 40px;
+        margin: 0 auto;
+        border-bottom: none;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #nav .menuWrap ul .bbDisNone {
+        height: 40px;
+        margin: 0;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    #nav .menuWrap ul .bb:hover ul li a:hover {
+        border-bottom: unset;
+    }
+
+    /*-----------------logo-----------------------*/
+    .logoWrap {
+        justify-content: center;
+        width: 120px;
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
+        background-size: 120px auto;
+        margin-left: 0px;
+    }
+
+    /* .logo a{
     width:80px;
     height:80px;
 } */
-.logo_line{
-    display: none;
-}
+    .logo_line {
+        display: none;
+    }
 
 }

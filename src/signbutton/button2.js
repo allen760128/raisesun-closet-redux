@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import style from '../common/signbutton/button.module.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const Button = (props) => {
-    const [change, setChange] = useState();
-    const [focus, setFocus] = useState(false);
     const [click, setClick] = useState(false);
     const loading = useSelector(state => state.validation.loading);
     const subclick = props.click;

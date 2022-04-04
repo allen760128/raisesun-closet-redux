@@ -20,7 +20,7 @@ const Social = () => {
     }
     const mB = { top: mouseOver ? '0' : '-100px', opacity: mouseOver ? '1' : '0' };
     const mU = { top: mouseOver ? '0' : '100px', opacity: mouseOver ? '1' : '0' };
-    const mA = { opacity: mouseOver ? '0' : '1' };
+    // const mA = { opacity: mouseOver ? '0' : '1' };
     return (
         <div id={style.social}>
             <div className={style.link} data-aos="fade-up" data-aos-duration="3000">
@@ -29,14 +29,14 @@ const Social = () => {
                         socialData.map(social => (
                             <li key={social.id} onMouseEnter={() => { handleMouseOver(social.id) }} onMouseLeave={handleMouseLeave}>
                                 {
-                                    social.id == mouseOver ? <i style={mB}></i> : <i></i>
+                                    social.id === mouseOver ? <i style={mB}></i> : <i></i>
                                 }
                                 <i style={{ backgroundImage: `url(img/${social.backImg})` }}
                                 >{social.title}</i>
                                 {
-                                    social.id == mouseOver ?
-                                        <a href={social.link} className={style.f_u} style={mU} target="_blank">{social.title}</a> :
-                                        <a href={social.link} className={style.f_u} target="_blank">{social.title}</a>
+                                    social.id === mouseOver ?
+                                        <a href={social.link} className={style.f_u} style={mU} rel="noreferrer" target="_blank">{social.title}</a> :
+                                        <a href={social.link} className={style.f_u} rel="noreferrer" target="_blank">{social.title}</a>
                                 }
 
                             </li>
