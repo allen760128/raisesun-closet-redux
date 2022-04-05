@@ -355,6 +355,10 @@
         opacity: 1;
         position: fixed;
         cursor: pointer;
+        /* width: 100%; */
+        /* background-color: #fefbf4; */
+        /* align-items: flex-end;
+        padding-right: 15px; */
     }
 
     #nav .menuWrap {

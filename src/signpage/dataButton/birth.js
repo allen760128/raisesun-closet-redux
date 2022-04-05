@@ -6,9 +6,10 @@ import { useSelector } from 'react-redux';
 const Normal2 = (props) => {
     const changeBirth = useSelector(state => state.validation.changeBirth);
     const switchSignBirthError = useSelector(state => state.validation.switchSignBirthError);
-    const name = props.name;
+    // const name = props.name;
     const typeProps = props.types
     const [focus, setFocus] = useState(false);
+    const [birthvalue, setBirth] = useState('');
     const handle_focus = () => {
         setFocus(true);
     };
@@ -21,9 +22,9 @@ const Normal2 = (props) => {
         <div className={style.inputWrap}>
             <input type={typeProps}
                 name="" id="userBirth"
-                placeholder={name}
-                value={changeBirth}
-                // onChange={(e) => { dispatch(handle_birth(e)) }}
+                placeholder={changeBirth}
+                value={birthvalue}
+                onChange={(e) => { setBirth(e.target.value) }}
                 onFocus={() => { handle_focus() }}
                 onBlur={() => { handle_blur() }}
                 style={focusStyle}

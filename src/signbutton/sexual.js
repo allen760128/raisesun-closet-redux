@@ -7,9 +7,9 @@ const Normal2 = (props) => {
     // const changeId = useSelector(state => state.validation.changeId);
     const switchSignIdError = useSelector(state => state.validation.switchSignIdError);
     const [focus, setFocus] = useState(false);
-    const [sex, setSex] = useState('男');
-    const name = props.name;
-    const typeProps = props.types
+    const [sex, setSex] = useState('');
+    // const name = props.name;
+    const typeProps = props.types;
     const handle_focus = () => {
         setFocus(true);
     };
@@ -22,7 +22,7 @@ const Normal2 = (props) => {
         <div className={style.inputWrap}>
             <input type={typeProps}
                 name="" id="userId"
-                placeholder={name}
+                placeholder='男'
                 value={sex}
                 onChange={(e) => { setSex(e.target.value) }}
                 onFocus={() => { handle_focus() }}

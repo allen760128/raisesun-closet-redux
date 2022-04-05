@@ -8,8 +8,9 @@ const Normal2 = (props) => {
     const changeZipcode = useSelector(state => state.validation.changeZipcode);
     const switchSignNameError = useSelector(state => state.validation.switchSignNameError);
     const [focus, setFocus] = useState(false);
-    const name = props.name;
-    const typeProps = props.types
+    // const name = props.name;
+    const typeProps = props.types;
+    const [zipvalue, setZip] = useState('');
     const maxlengthProps = props.maxlength;
     const handle_focus = () => {
         setFocus(true);
@@ -23,9 +24,9 @@ const Normal2 = (props) => {
         <div className={style.inputWrap}>
             <input type={typeProps}
                 name="" id="userName"
-                placeholder={name}
-                value={changeZipcode}
-                onChange={(e) => { dispatch(handle_zipcode(e)) }}
+                placeholder={changeZipcode}
+                value={zipvalue}
+                onChange={(e) => { setZip(e.target.value) }}
                 onFocus={() => { handle_focus() }}
                 onBlur={() => { handle_blur() }}
                 style={focusStyle}

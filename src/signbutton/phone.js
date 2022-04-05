@@ -7,9 +7,10 @@ const Normal2 = (props) => {
     const dispatch = useDispatch();
     const changePhone = useSelector(state => state.validation.changePhone);
     const switchSignPhoneError = useSelector(state => state.validation.switchSignPhoneError);
-    const name = props.name;
+    // const name = props.name;
     const typeProps = props.types
     const [focus, setFocus] = useState(false);
+    const [phonevalue, setPhone] = useState('');
     const handle_focus = () => {
         setFocus(true);
     };
@@ -22,9 +23,9 @@ const Normal2 = (props) => {
         <div className={style.inputWrap}>
             <input type={typeProps}
                 name="" id="userPhone"
-                placeholder={name}
-                value={changePhone}
-                onChange={(e) => { dispatch(handle_phone(e)) }}
+                placeholder={changePhone}
+                value={phonevalue}
+                onChange={(e) => { setPhone(e.target.value) }}
                 onFocus={() => { handle_focus() }}
                 onBlur={() => { handle_blur() }}
                 style={focusStyle}

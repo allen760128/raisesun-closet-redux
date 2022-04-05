@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import style from '../common/signbutton/normal2.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { handle_location } from '../store/validationActions';
+import { useSelector } from 'react-redux';
 
 const Normal2 = (props) => {
-    const dispatch = useDispatch();
     const changelocation = useSelector(state => state.validation.changelocation);
     const switchSignNameError = useSelector(state => state.validation.switchSignNameError);
     const [focus, setFocus] = useState(false);
-    const name = props.name;
-    const typeProps = props.types
+    // const name = props.name;
+    const typeProps = props.types;
+    const [locavalue, setLoca] = useState('');
     const maxlengthProps = props.maxlength;
     const handle_focus = () => {
         setFocus(true);
@@ -23,9 +22,9 @@ const Normal2 = (props) => {
         <div className={style.inputWrap}>
             <input type={typeProps}
                 name="" id="userName"
-                placeholder={name}
-                value={changelocation}
-                onChange={(e) => { dispatch(handle_location(e)) }}
+                placeholder={changelocation}
+                value={locavalue}
+                onChange={(e) => { setLoca(e.target.value) }}
                 onFocus={() => { handle_focus() }}
                 onBlur={() => { handle_blur() }}
                 style={focusStyle}

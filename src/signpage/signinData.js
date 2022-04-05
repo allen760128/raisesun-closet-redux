@@ -24,8 +24,6 @@ const SigninData = (props) => {
     const navigate = useNavigate();
     const tk = localStorage.getItem('token');
     const testData = useSelector(state => state.validation.testData);
-    console.log(loggedIn)
-    console.log(tk)
     //text
     useEffect(() => {
         dispatch(fetchTest());

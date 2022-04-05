@@ -7,9 +7,10 @@ const Normal2 = (props) => {
     const dispatch = useDispatch();
     const changeEmail = useSelector(state => state.validation.changeEmail);
     const switchSignEmailError = useSelector(state => state.validation.switchSignEmailError);
-    const name = props.name;
+    // const name = props.name;
     const typeProps = props.types
     const [focus, setFocus] = useState(false);
+    const [emailvalue, setEmail] = useState('');
     const handle_focus = () => {
         setFocus(true);
     };
@@ -22,9 +23,9 @@ const Normal2 = (props) => {
         <div className={style.inputWrap}>
             <input type={typeProps}
                 name="" id="usermail"
-                placeholder={name}
-                value={changeEmail}
-                onChange={(e) => { dispatch(handle_email(e)) }}
+                placeholder={changeEmail}
+                value={emailvalue}
+                onChange={(e) => { setEmail(e.target.value) }}
                 onFocus={() => { handle_focus() }}
                 onBlur={() => { handle_blur() }}
                 style={focusStyle}

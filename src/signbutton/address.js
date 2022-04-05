@@ -8,9 +8,10 @@ const Normal2 = (props) => {
     const changeAddress = useSelector(state => state.validation.changeAddress);
     const switchSignNameError = useSelector(state => state.validation.switchSignNameError);
     const [focus, setFocus] = useState(false);
-    const name = props.name;
+    // const name = props.name;
     const typeProps = props.types
     const maxlengthProps = props.maxlength;
+    const [addvalue, setAdd] = useState('');
     const handle_focus = () => {
         setFocus(true);
     };
@@ -23,9 +24,9 @@ const Normal2 = (props) => {
         <div className={style.inputWrap}>
             <input type={typeProps}
                 name="" id="userName"
-                placeholder={name}
-                value={changeAddress}
-                onChange={(e) => { dispatch(handle_address(e)) }}
+                placeholder={changeAddress}
+                value={addvalue}
+                onChange={(e) => { setAdd(e.target.value) }}
                 onFocus={() => { handle_focus() }}
                 onBlur={() => { handle_blur() }}
                 style={focusStyle}

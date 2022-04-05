@@ -5,6 +5,7 @@ const Button = (props) => {
     // const [change, setChange] = useState();
     // const [focus, setFocus] = useState(false);
     const [click, setClick] = useState(false);
+    const [button1, setButton1] = useState('取消');
     // const name = props.name;
     // const handle_changePage = (e) => {
     //     setChange(e.target.value);
@@ -26,9 +27,9 @@ const Button = (props) => {
         <div className={style.inputWrap}>
             <input type='submit'
                 name="" id=""
-                placeholder=''
-                value={names}
-                // onChange={(e) => { handle_changePage(e) }}
+                placeholder={names}
+                value={button1}
+                onChange={(e) => { setButton1(e.target.value) }}
                 // onFocus={() => { handle_focus() }}
                 // onBlur={() => { handle_blur() }}
                 onMouseDown={() => { handle_click() }}
