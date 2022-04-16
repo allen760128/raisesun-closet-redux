@@ -84,8 +84,8 @@ const Nav = (props) => {
                         <ul className={pantsClick ? style.bbUl : ''}>
                             <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Pants</Link></li>
                             <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Vest</Link></li>
-                            <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Top</Link></li>
-                            <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Shorts</Link></li>
+                            <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/test_' className={pantsAClass}>Top</Link></li>
+                            <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/testlinkref' className={pantsAClass}>Shorts</Link></li>
                             <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Acces</Link></li>
                             <li className={pantsClass} onClick={(e) => { e.preventDefault() }}><Link to='/pants' className={pantsAClass}>Jeans</Link></li>
                         </ul>

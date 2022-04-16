@@ -25,7 +25,7 @@ const App = () => {
           <Route path='pants/pantspropage:id' element={<Pantspropage />}></Route>
           <Route path='/signin' element={<Signpage />}></Route>
           <Route path='/signindata' element={<SigninData />}></Route>
-          <Route path='/test' element={<Test />}></Route>
+          <Route path='/test:id' element={<Test />}></Route>
           <Route path='/forloop' element={<Forloop />}></Route>
         </Routes>
       </HashRouter>
