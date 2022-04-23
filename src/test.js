@@ -3,7 +3,7 @@ import style from './test.module.css';
 import { useParams, Link } from 'react-router-dom'
 import { useFormik } from 'formik';
 import axios from 'axios';
-import { ConstructionOutlined } from '@mui/icons-material';
+import { ConstructionOutlined, ContentCutOutlined } from '@mui/icons-material';
 
 const Test = () => {
     const [list, setList] = useState('');
@@ -11,10 +11,16 @@ const Test = () => {
     const { id } = useParams();
     const linkref = useRef(id);
     const [scroll, setScroll] = useState(0);
+
+
+    //radio操縱
     const [ra, setRa] = useState('');
     const [ra2, setRa2] = useState('');
     const [ra3, setRa3] = useState('');
     const [allra, setAllra] = useState('');
+    const [rank, setRank] = useState([]);
+
+
     const formik = useFormik({
         initialValues: {
             names: '',
@@ -98,19 +104,18 @@ const Test = () => {
     useEffect(() => {
         if (ra !== '' && ra2 !== '' && ra3 !== '') {
             switch (allra.toString()) {
-                case 'ra1,ra3,ra5': return (console.log('ra1與ra3與ra5'))
-                case 'ra1,ra3,ra6': return (console.log('ra1與ra3與ra6'))
-                case 'ra1,ra4,ra5': return (console.log('ra1與ra4與ra5'))
-                case 'ra1,ra4,ra6': return (console.log('ra1與ra4與ra6'))
-                case 'ra2,ra3,ra5': return (console.log('ra2與ra3與ra5'))
-                case 'ra2,ra3,ra6': return (console.log('ra2與ra3與ra6'))
-                case 'ra2,ra4,ra5': return (console.log('ra2與ra4與ra5'))
-                case 'ra2,ra4,ra6': return (console.log('ra2與ra4與ra6'))
+                case 'ra1,ra3,ra5': return (setRank([{ id: 1, title: '電子報' }, { id: 2, title: '工作坊' }, { id: 3, title: '教育訓練' }]))
+                case 'ra1,ra3,ra6': return (setRank([{ id: 1, title: '電子報' }, { id: 3, title: '教育訓練' }]))
+                case 'ra1,ra4,ra5': return (setRank([{ id: 2, title: '工作坊' }, { id: 3, title: '教育訓練' }]))
+                case 'ra1,ra4,ra6': return (setRank([{ id: 1, title: '電子報' }, { id: 2, title: '工作坊' }]))
+                case 'ra2,ra3,ra5': return (setRank([{ id: 3, title: '教育訓練' }]))
+                case 'ra2,ra3,ra6': return (setRank([{ id: 1, title: '電子報' }]))
+                case 'ra2,ra4,ra5': return (setRank([{ id: 2, title: '工作坊' }]))
+                case 'ra2,ra4,ra6': return (setRank([{ id: 1, title: '電子報' }, { id: 2, title: '工作坊' }]))
             }
         }
         console.log('render')
     }, [allra]);
-
 
     return (
         <div className={style.aaa} style={{ backgroundImage: 'url(/img/bk.jpg)' }}>
@@ -162,6 +167,9 @@ const Test = () => {
                     </div>
                 </div>
             </div>
+
+
+
             <div className={style.radiotest}>
                 <div className={style.ra1}>
                     <input type="radio" name="" id="" value='ra1'
@@ -191,7 +199,17 @@ const Test = () => {
                         <label htmlFor="">沒有</label>
                     </div>
                 )}
+                <div className={style.colorWrap}>
+                    {
+                        rank.map(data => (
+                            <div className={style.colorblock} key={data.id}>{data.title}</div>
+                        ))
+                    }
+                </div>
             </div>
+
+
+
             <div className='aa' style={{ height: '800px', backgroundColor: '#fde' }}></div>
             <div className='bb' style={{ height: '800px', backgroundColor: '#fda' }} ref={linkref}></div>
             <div className='cc' style={{ height: '800px', backgroundColor: '#fce' }}></div>

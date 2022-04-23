@@ -157,6 +157,25 @@
     margin-right: 30px;
 }
 
+.radiotest .colorWrap {
+    width: 80%;
+    height: 150px;
+    background-color: #fda;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.radiotest .colorWrap .colorblock {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background-color: rgb(194, 109, 109);
+}
+
 @media (max-width:768px) {
     .bbb {
         flex-direction: column;
