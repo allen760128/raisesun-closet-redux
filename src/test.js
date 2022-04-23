@@ -3,7 +3,7 @@ import style from './test.module.css';
 import { useParams, Link } from 'react-router-dom'
 import { useFormik } from 'formik';
 import axios from 'axios';
-import { ConstructionOutlined, ContentCutOutlined } from '@mui/icons-material';
+import qs from 'querystring';//把物件轉成urlencoding
 
 const Test = () => {
     const [list, setList] = useState('');
@@ -12,6 +12,13 @@ const Test = () => {
     const linkref = useRef(id);
     const [scroll, setScroll] = useState(0);
 
+
+    const obj = { name: 'Tom', age: 18 };
+    const str = 'name=湯姆&sexule=gay';
+    //把物件轉成urlencoding
+    // console.log(qs.stringify(obj));
+    //把urlencoding轉為物件
+    // console.log(qs.parse(str));
 
     //radio操縱
     const [ra, setRa] = useState('');
@@ -99,6 +106,7 @@ const Test = () => {
 
 
     useEffect(() => {
+        setRank([]);
         setAllra([ra, ra2, ra3])
     }, [ra, ra2, ra3]);
     useEffect(() => {

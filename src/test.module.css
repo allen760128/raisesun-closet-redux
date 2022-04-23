@@ -160,7 +160,6 @@
 .radiotest .colorWrap {
     width: 80%;
     height: 150px;
-    background-color: #fda;
     margin-top: 50px;
     display: flex;
     justify-content: center;
@@ -174,6 +173,17 @@
     text-align: center;
     line-height: 80px;
     background-color: rgb(194, 109, 109);
+    animation: switch 1s ease-in-out;
+}
+
+@keyframes switch {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width:768px) {
