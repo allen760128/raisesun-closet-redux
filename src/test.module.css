@@ -198,3 +198,99 @@
         align-items: center;
     }
 }
+
+.cc {
+    display: flex;
+    justify-content: center;
+}
+
+.roundWrap {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: #fda;
+}
+
+.round {
+    width: 400px;
+    height: 400px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(250, 250, 250, 0) 0%, rgba(239, 239, 239, 0.5) 100%);
+    animation: rou 5s linear infinite;
+    position: absolute;
+}
+
+.round2 {
+    width: 300px;
+    height: 300px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(250, 250, 250, 0) 0%, rgba(239, 239, 239, 0.5) 100%);
+    animation: rou2 5s linear 1s infinite;
+}
+
+.round3 {
+    width: 200px;
+    height: 200px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(250, 250, 250, 0) 0%, rgba(239, 239, 239, 0.5) 100%);
+    animation: rou3 5s linear 2s infinite;
+}
+
+@keyframes rou {
+    from {
+        /* width: 500px;
+        height: 500px; */
+        opacity: 0.5;
+    }
+
+    to {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+@keyframes rou2 {
+    from {
+        /* width: 500px;
+        height: 500px; */
+        opacity: 0.5;
+    }
+
+    to {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+    }
+}
+
+@keyframes rou3 {
+    from {
+        /* width: 500px;
+        height: 500px; */
+        opacity: 0.5;
+    }
+
+    to {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
