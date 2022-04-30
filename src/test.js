@@ -236,7 +236,7 @@ const Test = () => {
                     <div className={style.ra1}>
                         <input type="radio" name="" id="" value='ra5'
                             checked={ra3 === 'ra5'} onChange={(e) => { setRa3(e.target.value) }} />
-                        <label htmlFor="">有嗎 </label>
+                        <label htmlFor="">有</label>
                         <input type="radio" name="" id="" value='ra6'
                             checked={ra3 === 'ra6'} onChange={(e) => { setRa3(e.target.value) }} />
                         <label htmlFor="">沒有</label>
