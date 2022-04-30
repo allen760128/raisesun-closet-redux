@@ -294,3 +294,15 @@
         opacity: 0;
     }
 }
+
+.vec {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.vec img {
+    width: 150px;
+}

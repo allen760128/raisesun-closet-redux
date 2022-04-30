@@ -4,6 +4,8 @@ import { useParams, Link } from 'react-router-dom'
 import { useFormik } from 'formik';
 import axios from 'axios';
 import qs from 'querystring';//把物件轉成urlencoding
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import data from './data.json'
 
 const Test = () => {
     const [list, setList] = useState('');
@@ -248,7 +250,15 @@ const Test = () => {
                     }
                 </div>
             </div>
-
+            <Player
+                autoplay
+                loop
+                src={data}
+                // src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
+                style={{ height: 'auto', width: '300px' }}
+            >
+                <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
+            </Player>
 
 
             <div className='aa' style={{ height: '800px' }}>
@@ -261,7 +271,45 @@ const Test = () => {
                     <div className={style.round2}></div>
                     <div className={style.round3}></div>
                 </div>
+                <div className={style.vec}>
+                    <img src="./img/68.svg" alt="" />
+                    {/* <svg width="109" height="92" viewBox="0 0 109 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M99.7988 0H8.72562C6.41204 0.00192934 4.19376 0.916747 2.55781 2.54361C0.921858 4.17048 0.00194011 6.37643 0 8.67716V69.1477C0.00194011 71.4485 0.921858 73.6544 2.55781 75.2813C4.19376 76.9081 6.41204 77.823 8.72562 77.8249H37.8916V83.9739H28.8729V91.9225H79.6515V83.9958H70.6328V77.8467H99.7988C102.112 77.8448 104.331 76.93 105.967 75.3031C107.603 73.6763 108.522 71.4703 108.524 69.1696V8.69902C108.526 7.55795 108.302 6.42768 107.865 5.37283C107.427 4.31798 106.785 3.35922 105.974 2.55134C105.164 1.74347 104.202 1.10232 103.142 0.66455C102.082 0.226776 100.946 0.000955668 99.7988 0V0ZM8.72562 2.30954H99.7988C101.496 2.31147 103.124 2.98296 104.324 4.1767C105.525 5.37045 106.2 6.98895 106.202 8.67716V66.5759H2.32242V8.67716C2.32436 6.98895 2.9996 5.37045 4.20001 4.1767C5.40042 2.98296 7.02799 2.31147 8.72562 2.30954V2.30954ZM77.329 86.3053V89.6349H31.1734V86.3053H77.329ZM68.3104 83.9958H40.214V77.8467H68.3104V83.9958ZM99.8134 75.5372H8.72562C7.02799 75.5353 5.40042 74.8638 4.20001 73.67C2.9996 72.4763 2.32436 70.8578 2.32242 69.1696V68.8709H106.202V69.1696C106.2 70.8578 105.525 72.4763 104.324 73.67C103.124 74.8638 101.496 75.5353 99.7988 75.5372H99.8134Z" fill="url(#paint0_linear_187_97)" />
+                        <path d="M16.5281 59.7712C18.0314 59.7692 19.4726 59.1745 20.5356 58.1174C21.5987 57.0603 22.1967 55.6271 22.1987 54.1321C22.194 53.1387 21.9207 52.1648 21.4074 51.3126L34.1405 38.8906L52.4562 58.926L85.2927 23.7438L90.8534 29.2736L95.5056 12.0286L78.1569 16.6476L83.6516 22.1118L52.4709 55.5018L34.2358 35.5538L19.8542 49.5932C18.8926 48.8818 17.7267 48.4962 16.5281 48.493C15.0242 48.493 13.5818 49.0872 12.5184 50.1447C11.455 51.2022 10.8575 52.6365 10.8575 54.1321C10.8575 55.6277 11.455 57.062 12.5184 58.1195C13.5818 59.1771 15.0242 59.7712 16.5281 59.7712V59.7712ZM92.2234 15.2707L89.6519 24.8002L82.6406 17.8279L92.2234 15.2707ZM16.5281 50.8026C17.1921 50.8026 17.8411 50.9985 18.393 51.3654C18.945 51.7324 19.3751 52.254 19.6288 52.8641C19.8826 53.4743 19.9486 54.1456 19.8185 54.793C19.6885 55.4405 19.3682 56.0351 18.8982 56.5014C18.4282 56.9678 17.8296 57.285 17.1782 57.413C16.5268 57.5409 15.8519 57.4738 15.2389 57.2201C14.6259 56.9664 14.1024 56.5376 13.7346 55.9879C13.3668 55.4382 13.1712 54.7924 13.1727 54.1321C13.1746 53.2484 13.529 52.4015 14.158 51.7773C14.7871 51.1531 15.6395 50.8026 16.5281 50.8026V50.8026Z" fill="url(#paint1_linear_187_97)" >
+                            <animateTransform attributeName="transform"
+                                type="rotate"
+                                from="0 50 50" to="360 50 50"
+                                begin="0s" dur="1s"
+                                repeatCount="indefinite"
+                            />
+                        </path>
+                        <defs>
+                            <linearGradient id="paint0_linear_187_97" x1="10.1176" y1="82.8228" x2="97.9151" y2="-5.46499" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#3990CF" />
+                                <stop offset="0.2" stop-color="#46AACD" />
+                                <stop offset="0.38" stop-color="#4EB9CB" />
+                                <stop offset="0.52" stop-color="#51BFCB" />
+                                <stop offset="0.67" stop-color="#50BCCA" />
+                                <stop offset="0.78" stop-color="#4CB2C9" />
+                                <stop offset="0.89" stop-color="#45A1C6" />
+                                <stop offset="0.99" stop-color="#3B8AC1" />
+                                <stop offset="1" stop-color="#3A88C1" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_187_97" x1="22.8434" y1="68.3828" x2="87.1598" y2="3.71451" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#3990CF" />
+                                <stop offset="0.2" stop-color="#46AACD" />
+                                <stop offset="0.38" stop-color="#4EB9CB" />
+                                <stop offset="0.52" stop-color="#51BFCB" />
+                                <stop offset="0.67" stop-color="#50BCCA" />
+                                <stop offset="0.78" stop-color="#4CB2C9" />
+                                <stop offset="0.89" stop-color="#45A1C6" />
+                                <stop offset="0.99" stop-color="#3B8AC1" />
+                                <stop offset="1" stop-color="#3A88C1" />
+                            </linearGradient>
+                        </defs>
+                    </svg> */}
 
+                </div>
             </div>
 
         </div>
