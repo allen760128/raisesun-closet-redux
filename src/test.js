@@ -239,7 +239,7 @@ const Test = () => {
                         <label htmlFor="">有</label>
                         <input type="radio" name="" id="" value='ra6'
                             checked={ra3 === 'ra6'} onChange={(e) => { setRa3(e.target.value) }} />
-                        <label htmlFor="">沒有dd</label>
+                        <label htmlFor="">沒有</label>
                     </div>
                 )}
                 <div className={style.colorWrap}>
