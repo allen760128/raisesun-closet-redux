@@ -14,6 +14,7 @@ const Test = () => {
     const linkref = useRef(id);
     const [scroll, setScroll] = useState(0);
     const canvasref = useRef();
+    const [visit, setVisit] = useState(false);
 
 
     const obj = { name: 'Tom', age: 18 };
@@ -158,6 +159,23 @@ const Test = () => {
         // console.log('render')
     }, [allra]);
 
+    const ox =
+        [0, 1, -1,
+            1, -1, 0,
+            0, 1, 1]
+
+    const tosynbol = (s) => {
+        switch (s) {
+            case 0: return '';
+            case 1: return 'O';
+            case -1: return 'X';
+        }
+    }
+
+    const visible = () => {
+        setVisit(true)
+    }
+    const visi = { visibility: visit ? 'hidden' : 'visible', opacity: visit ? '0' : '1' }
 
     return (
         <div className={style.aaa} style={{ backgroundImage: 'url(/img/bk.jpg)' }}>
@@ -259,8 +277,47 @@ const Test = () => {
             >
                 <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
             </Player>
+            <div className={style.gridtest}>
+                <div className={style.gwrap}>
+                    <div>
+                        <h4>這asdfasdfasdfasfasf是h4</h4>
+                        <p>這asdfasdfasdfasdf是p</p>
+                    </div>
+                    <div>
+                        <h4>這asdfasdfasdfasfasf是h4</h4>
+                        <p>這asdfasdfasdfasdf是p</p>
+                    </div>
+                    <div>
+                        <h4>這asdfasdfasdfasfasf是h4</h4>
+                        <p>這asdfasdfasdfasdf是p</p>
+                    </div>
+                    <div>
+                        <h4>這asdfasdfasdfasfasf是h4</h4>
+                        <p>這asdfasdfasdfasdf是p</p>
+                    </div>
+                </div>
+            </div>
 
-
+            <div className={style.gridtest2}>
+                <ul className={style.grid2}>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
             <div className='aa' style={{ height: '800px' }}>
                 <canvas id='canvas' width='500' height='300' style={{ display: 'block', border: '1px solid #5a5a5a', margin: '0 auto' }} ref={canvasref}></canvas>
             </div>
@@ -311,6 +368,19 @@ const Test = () => {
 
                 </div>
             </div>
+            <div className={style.ox}>
+                <div className={style.oxWrap}>
+                    <ul>
+                        {
+                            ox.map((data, inx) => (
+                                <li key={inx}>{tosynbol(data)}</li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div className={style.trans} onClick={visible} style={visi}></div>
+            <input type="text" className={style.inp} />
 
         </div>
     )

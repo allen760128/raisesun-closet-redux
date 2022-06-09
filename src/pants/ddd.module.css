@@ -1,0 +1,25 @@
+.aa {
+    width: 70%;
+}
+
+.aa {
+    font-size: 80px !important;
+    color: aqua
+}
+
+.md {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.md .inner {
+    width: 500px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+}

@@ -8,6 +8,7 @@ import P2 from './p2';
 import Test from './test';
 import Pants from './pants';
 import Pantspropage from './pants/pantsProPage';
+import D from './pants/ddd';
 import Signpage from './signpage/signIn';
 import SigninData from './signpage/signinData';
 import Forloop from './forloop';
@@ -29,6 +30,7 @@ const App = () => {
           <Route path='/test:id' element={<Test />}></Route>
           <Route path='/forloop' element={<Forloop />}></Route>
           <Route path='/array' element={<Array />}></Route>
+          <Route path='/ddd' element={<D />}></Route>
         </Routes>
       </HashRouter>
     </Provider>
