@@ -34,6 +34,7 @@ const Test = () => {
     const rankdata = [{ id: 1, title: '電子報' }, { id: 2, title: '工作坊' }, { id: 3, title: '教育訓練' }];
 
 
+
     const formik = useFormik({
         initialValues: {
             names: '',
@@ -380,8 +381,6 @@ const Test = () => {
                 </div>
             </div>
             <div className={style.trans} onClick={visible} style={visi}></div>
-            <input type="text" className={style.inp} />
-
         </div>
     )
 }

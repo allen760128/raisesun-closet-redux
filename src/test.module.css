@@ -17,11 +17,13 @@
     /* height: 500px; */
     /* background-color: #fda; */
     margin: 0 auto;
+    padding: 12rem 0;
 }
 
 .wrap {
     max-width: 1400px;
     margin: 0 auto;
+
 }
 
 .bbb {
@@ -408,7 +410,9 @@
 }
 
 .inp {
-    width: 100px;
+    width: 300px;
+    height: 50px;
     margin: 0 auto;
     display: block;
+    margin-top: 5rem;
 }
