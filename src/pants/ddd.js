@@ -12,7 +12,7 @@ const DD = () => {
     const [testArr, setTestarr] = useState([]);
     const [page, setPage] = useState([]);
     const [pvalue, setPvalue] = useState(1);
-
+    console.log('555')
     const [data, setData] = useState({
         labels: [1, 2, 3, 4],
         datasets: [
@@ -75,6 +75,8 @@ const DD = () => {
         setTestarr(totle.slice((pvalue - 1) * 10, pvalue * 10));
     }, [pvalue, totle])
     console.log(page)
+
+
 
     const cc = (e) => {
         e.stopPropagation();
