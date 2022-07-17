@@ -76,6 +76,8 @@ const DD = () => {
     }, [pvalue, totle])
     console.log(page)
 
+
+
     const cc = (e) => {
         e.stopPropagation();
         // setMd(false)
