@@ -12,12 +12,8 @@ const DD = () => {
     const [testArr, setTestarr] = useState([]);
     const [page, setPage] = useState([]);
     const [pvalue, setPvalue] = useState(1);
-<<<<<<< HEAD
 
 
-=======
-    console.log('555')
->>>>>>> 3ac646c3d49264ea9c1f08b72c51a00c84166352
     const [data, setData] = useState({
         labels: [1, 2, 3, 4],
         datasets: [
